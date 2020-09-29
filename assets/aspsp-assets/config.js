@@ -7,6 +7,3 @@ var _config = {
   "base_api_path": "https://system.tell.money/dev/",
   "swagger_file": "https://system.tell.money/dev/swagger/interface/example-bank-open-banking-api"
 };
-console.log(window.location.hostname);
-const hostnameArray = window.location.hostname.split('.');
-console.log(JSON.stringify(hostnameArray));

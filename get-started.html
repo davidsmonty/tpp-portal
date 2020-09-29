@@ -27,7 +27,12 @@
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
 
-    <script src="./assets/aspsp-assets/config.js"></script> 
+    <script src="./assets/aspsp-assets/config.js"></script>
+    <script>
+        console.log(window.location.hostname);
+        const hostnameArray = window.location.hostname.split('.');
+        console.log(JSON.stringify(hostnameArray));
+    </script>
     
 </head>
 
@@ -299,19 +304,22 @@
                         client_id and client_secret. You must also sign the request by including a valid JTW in the
                         “x-jws-signature” header (see Message Signing below for more details)</p>
                     <p>You will receive two values in response:
-                        <ul>
-                            <li>
-                                - an <strong>intent-id</strong> - this is our reference for the request
-                            </li>
-                            <li>
-                                - a <strong>location</strong> - this is where you should redirect the user for authentication
-                            </li>
-                        </ul></p>
+                    <ul>
+                        <li>
+                            - an <strong>intent-id</strong> - this is our reference for the request
+                        </li>
+                        <li>
+                            - a <strong>location</strong> - this is where you should redirect the user for
+                            authentication
+                        </li>
+                    </ul>
+                    </p>
                     <hr class="hr-dash my-7">
 
 
                     <h3 id="psu_auth">PSU Authorisation</h3>
-                    <p>Now, simply redirect the user to the <strong>location</strong> you received in the previous step.</p>
+                    <p>Now, simply redirect the user to the <strong>location</strong> you received in the previous step.
+                    </p>
 
                     <p>{{Tell-Client}} will then guide the consumer through a consent journey which involves both user
                         authentication and authorisation.</p>
@@ -584,7 +592,7 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/howitworks.js?v=1"></script>
     <script src="./assets/js/v_logic.js"></script>
-    
+
 
     <script>
         if (_config.pisp === false) {
