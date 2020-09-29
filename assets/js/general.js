@@ -78,8 +78,7 @@ var affinity_retry_handler = {
         },
         registerOnclicks: function () {
 
-            $(document).click(function(){
-                console.log('hide it')
+            $(document).click(function(){                
                 $(".dropdown-box").removeClass('show');
             });
 
