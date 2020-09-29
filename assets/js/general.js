@@ -208,7 +208,7 @@ brandify.initialise();
 
 /* Swagger / Redocs Logic */
 
-var tell_docs={initialise:function(){ console.log('here'); tell_docs.registerOnclicks(),tell_docs.initPrefSpec()},initPrefSpec:function(){!0===$("#myonoffswitch").is(":checked")?($("#swagger-ui").fadeOut("slow",function(){$("#swagger-ui").addClass("hide-spec")}),$("#redoc_spec").fadeIn("slow",function(){$("#redoc_spec").removeClass("hide-spec")})):($("#redoc_spec").fadeOut("slow",function(){$("#redoc_spec").addClass("hide-spec")}),$("#swagger-ui").fadeIn("slow",function(){$("#swagger-ui").removeClass("hide-spec")}))},registerOnclicks:function(){$(document).on("change","#myonoffswitch",function(e){tell_docs.initPrefSpec()})}};
+var tell_docs={initialise:function(){ tell_docs.registerOnclicks(),tell_docs.initPrefSpec()},initPrefSpec:function(){!0===$("#myonoffswitch").is(":checked")?($("#swagger-ui").fadeOut("slow",function(){$("#swagger-ui").addClass("hide-spec")}),$("#redoc_spec").fadeIn("slow",function(){$("#redoc_spec").removeClass("hide-spec")})):($("#redoc_spec").fadeOut("slow",function(){$("#redoc_spec").addClass("hide-spec")}),$("#swagger-ui").fadeIn("slow",function(){$("#swagger-ui").removeClass("hide-spec")}))},registerOnclicks:function(){$(document).on("change","#myonoffswitch",function(e){tell_docs.initPrefSpec()})}};
 tell_docs.initialise();
 
 
