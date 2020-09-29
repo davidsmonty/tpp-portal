@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -19,407 +20,458 @@
     <link href="./assets/css/themify-icons.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="icon" href="./assets/aspsp-assets/favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-    <link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+    <link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+    <link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
     <script src="./assets/aspsp-assets/config.js"></script>
+
 </head>
 
 <body>
 
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-    <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
-            </a>
-        </div>
-        <section class="navbar-mobile">
-            <ul class="nav nav-navbar mr-auto">
-            </ul>
-            <div class="w-30">
-                <div class="flex" id="greeting-options" style="display: none">
-                    <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-                    <!-- BEGIN: Account Menu -->
-                    <div class="intro-x dropdown w-60 h-8 relative">
-                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                            <img id="profile-picture--header" alt="ProfilePic" src="">
-                        </div>
-                        <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                                <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium full-name"></div>
-                                    <div class="text-xs text-theme-41 role-name"></div>
-                                </div>
-                                <div class="p-2" id="profile_menu">
-                                </div>
-                                <div class="p-2 border-t border-theme-40">
-                                    <a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="/">
+                    <img class="logo-dark" src="./assets/aspsp-assets/default/logo-dark.png" alt="logo">
+                    <img class="logo-light" src="./assets/aspsp-assets/default/logo-light.png" alt="logo">
+                </a>
+            </div>
+            <section class="navbar-mobile">
+                <ul class="nav nav-navbar mr-auto">
+                </ul>
+                <div class="w-30">
+                    <div class="flex" id="greeting-options" style="display: none">
+                        <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+                        <!-- BEGIN: Account Menu -->
+                        <div class="intro-x dropdown w-60 h-8 relative">
+                            <div
+                                class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                                <img id="profile-picture--header" alt="ProfilePic" src="">
+                            </div>
+                            <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+                                <div class="dropdown-box__content box bg-theme-38 text-white">
+                                    <div class="p-4 border-b border-theme-40">
+                                        <div class="font-medium full-name"></div>
+                                        <div class="text-xs text-theme-41 role-name"></div>
+                                    </div>
+                                    <div class="p-2" id="profile_menu">
+                                    </div>
+                                    <div class="p-2 border-t border-theme-40">
+                                        <a
+                                            class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+                                            <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Account Menu -->
                     </div>
-                    <!-- END: Account Menu -->
+                    <div id="logInBox">
+                        <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+                        <a class="btn btn-sm btn-success" href="./login">Sign In</a>
+                    </div>
                 </div>
-                <div id="logInBox">
-                    <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-                    <a class="btn btn-sm btn-success" href="./login">Sign In</a>
-                </div>
-            </div>
-        </section>
-    </div>
-</nav>
-<!-- /.navbar -->
+            </section>
+        </div>
+    </nav>
+    <!-- /.navbar -->
 
 
-<!-- Header -->
-<header class="header" style="background-color: #f1f6fa">
-    <div class="container">
-        <h1 style="text-align:center;">Implementation Guide</h1>
-        <p class="lead" style="text-align: center;">Getting started with {{Tell-Client}} PSD2 API Suite.</p>
-    </div>
-</header><!-- /.header -->
+    <!-- Header -->
+    <header class="header" style="background-color: #f1f6fa">
+        <div class="container">
+            <h1 style="text-align:center;">Implementation Guide</h1>
+            <p class="lead" style="text-align: center;">Getting started with {{Tell-Client}} PSD2 API Suite.</p>
+        </div>
+    </header><!-- /.header -->
 
 
-<!-- Main Content -->
-<main class="main-content">
-    <div class="container">
-        <div class="row">
-            <!--
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+                <!--
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             | Sidebar
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
-            <div class="col-md-4 col-xl-3">
-                <aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
-                    <div class="sidebar-body">
-                        <ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#get-started">Getting started <i class="nav-angle"></i></a>
-                                <div class="nav">
-                                    <a class="nav-link" href="#intro">Introduction</a>
-                                    <a class="nav-link" href="#registration">Developer Registration</a>
-                                    <a class="nav-link" href="#appreg">App Registration</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#enviro">Environments <i class="nav-angle"></i></a>
-                                <div class="nav">
-                                    <a class="nav-link" href="#sandbox">Sandbox</a>
-                                    <a class="nav-link" href="#production">Production</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#acc_con">Account Consent <i class="nav-angle"></i></a>
-                                <div class="nav">
-                                    <a class="nav-link" href="#state_uuid">Initiate Consent</a>
-                                    <a class="nav-link" href="#psu_auth">PSU Authorisation</a>
-                                    <a class="nav-link" href="#auth_confirm">Authorisation Confirmation</a>
-                                    <a class="nav-link" href="#access_token">Obtain Access Token</a>
-                                    <a class="nav-link" href="#refresh_token">Refreshing Access Token</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#acc_access">Account Access <i class="nav-angle"></i></a>
-                            </li>
-                            <li class="nav-item pisp_functionality">
-                                <a class="nav-link" href="#pay_initiation">Payment Initiation <i class="nav-angle"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#cons_manage">Revoked Access<i class="nav-angle"></i></a>
+                <div class="col-md-4 col-xl-3">
+                    <aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
+                        <div class="sidebar-body">
+                            <ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#get-started">Getting started <i
+                                            class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#intro">Introduction</a>
+                                        <a class="nav-link" href="#registration">Developer Registration</a>
+                                        <a class="nav-link" href="#appreg">App Registration</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#enviro">Environments <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#sandbox">Sandbox</a>
+                                        <a class="nav-link" href="#production">Production</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#acc_con">Account Consent <i class="nav-angle"></i></a>
+                                    <div class="nav">
+                                        <a class="nav-link" href="#state_uuid">Initiate Consent</a>
+                                        <a class="nav-link" href="#psu_auth">PSU Authorisation</a>
+                                        <a class="nav-link" href="#auth_confirm">Confirmation</a>
+                                        <a class="nav-link" href="#access_token">Access Token</a>
+                                        <a class="nav-link" href="#refresh_token">Refresh Token</a>
+                                        <a class="nav-link" href="#cons_manage">Revoked Consent</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#acc_access">Account Access <i class="nav-angle"></i></a>
+                                </li>
+                                <li class="nav-item pisp_functionality">
+                                    <a class="nav-link" href="#pay_initiation">Payment Initiation <i
+                                            class="nav-angle"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#client_signing">Message Signing<i
+                                            class="nav-angle"></i></a>
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#client_signing">Certificate-Based Signing<i class="nav-angle"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#golive">Going Live <i class="nav-angle"></i></a>
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#golive">Going Live <i class="nav-angle"></i></a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
 
 
-            <!--
+                <!--
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             | Content
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
-            <div class="col-md-7 col-xl-8 ml-md-auto py-8">
-                <h2 id="get-started">Getting started</h2>
-                <p >{{Tell-Client}} has partnered with tell.connect to provide Third Party Providers (“TPPs”) with access to consumer account information and payment initiation in line with regulatory requirements.</p>
+                <div class="col-md-7 col-xl-8 ml-md-auto py-8">
+                    <h2 id="get-started">Getting started</h2>
+
+                    <p>{{Tell-Client}} has partnered with tell.connect to provide Third Party Providers (“TPPs”) with
+                        access to consumer account information <span class="pisp"> and payment initiation </span> in
+                        line with regulatory
+                        requirements.</p>
+
+                    <hr class="hr-dash my-7">
 
 
-                <hr class="hr-dash my-7">
+                    <h3 id="intro">Introduction</h3>
+                    <p>This guide outlines the process for registration, authorising and accessing consumer information
+                        as an AISP<span class="pisp">, and initiating payments as a PISP</span>. The detailed API
+                        specification can be found in
+                        the spec section of the website.</p>
+                    <p><a class="btn btn-outline-primary" href="./specs">The Specifications</a></p>
+
+                    <hr class="hr-dash my-7">
 
 
-                <h3 id="intro">Introduction</h3>
-                <p>This guide outlines the process for registration, authorising and accessing consumer information as an AISP, and initiating payments as a PISP. The detailed API specification can be found in the spec section of the website.</p>
-                <p><a class="btn btn-outline-primary" href="./specs">The Specifications</a></p>
-
-                <hr class="hr-dash my-7">
-
-
-                <h3 id="registration">Developer Registration</h3>
-                <p>All TPPs must register on the {{Tell-Client}} developer portal. We use the principle of least based privilege access and will only perform full due diligence checks when a TPP requests production access.</p>
-                <br>
-
-
-
-                <hr class="hr-dash my-7">
-
-
-                <h3 id="appreg">Application Registration</h3>
-                <p>TPPs may operate multiple applications with different requirements and security certification.</p>
-                <p>When you register an application on our portal, you will be issued with a unique "Client ID" & "Client Secret". For each application, you can provide a unique “Redirect URL” (the location we will return a user to after providing consent) and you have the option to upload an eIDAS certificate for authorisation and authentication.</p>
-                <p>The use of the Redirect URL, Client ID, Client Secret and eIDAS certificate are detailed below.</p>
-
-
-                <hr class="hr-dash my-7">
+                    <h3 id="registration">Developer Registration</h3>
+                    <p>All TPPs must register on the {{Tell-Client}} developer portal. We use the principle of least
+                        based privilege access and will only perform full due diligence checks when a TPP requests
+                        production access.</p>
+                    <br>
 
 
 
-                <!--
+                    <hr class="hr-dash my-7">
+
+
+                    <h3 id="appreg">Application Registration</h3>
+                    <p>TPPs may operate multiple applications with different requirements and security certification.
+                    </p>
+                    <p>When you register an application on our portal, you will be issued with a unique "Client ID" &
+                        "Client Secret". For each application, you can provide a unique “Redirect URL” (the location we
+                        will return a user to after providing consent) and you have the option to upload an eIDAS
+                        certificate for authorisation and authentication.</p>
+                    <p>The use of the Redirect URL, Client ID, Client Secret and eIDAS certificate are detailed below.
+                    </p>
+
+
+                    <hr class="hr-dash my-7">
+
+
+
+                    <!--
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 | Layout
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 !-->
-                <h2 id="enviro">Environments</h2>
-                <p >{{Tell-Client}}  provides two separate environments:</p>
+                    <h2 id="enviro">Environments</h2>
+                    <p>{{Tell-Client}} provides two separate environments:</p>
 
 
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
-                <h3 id="sandbox">Sandbox</h3>
-                <p>The Sandbox environment is broadly identical to Production but rather than connecting to live systems, it provides stubbed data. Some of the tighter usage restrictions are also eased in Sandbox, such as the need for unique requests IDs (this is described in more detail below).</p>
-
-
-
-
-                <hr class="hr-dash my-7">
+                    <h3 id="sandbox">Sandbox</h3>
+                    <p>The Sandbox environment is broadly identical to Production but rather than connecting to live
+                        systems, it provides stubbed data. Some of the tighter usage restrictions are also eased in
+                        Sandbox, such as the need for unique requests IDs (this is described in more detail below).</p>
 
 
 
-                <h3 id="production">Production</h3>
-                <p>The Production environment allows access to real client data. As you would expect this data is highly sensitive and we therefore are required to perform a higher level of due diligence and approval all requests for applications which would like to be moved into Production.</p>
 
-
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
 
-                <!--
+                    <h3 id="production">Production</h3>
+                    <p>The Production environment allows access to real client data. As you would expect this data is
+                        highly sensitive and we therefore are required to perform a higher level of due diligence and
+                        approval all requests for applications which would like to be moved into Production.</p>
+
+
+                    <hr class="hr-dash my-7">
+
+
+
+                    <!--
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 | Content
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 !-->
-                <h2 id="content">Account Access</h2>
+                    <h2 id="acc_con">Account Access</h2>
 
-                <img src="./assets/img/AccessDiagram.png" class="img-fluid" alt="Responsive image">
-                </br>
-                <p>In order to provide a TPP with a consumer’s data or to initiate a payment on their behalf, the consumer is required to grant permission to the TPP for a period not exceeding 90 days.</p>
-
-
-                <hr class="hr-dash my-7">
+                    <img src="./assets/img/AccessDiagram.png" class="img-fluid" alt="Responsive image">
+                    </br>
+                    <p>In order to provide a TPP with a consumer’s data or to initiate a payment on their behalf, the
+                        consumer is required to grant permission to the TPP for a period not exceeding 90 days.</p>
 
 
-                <h3 id="state_uuid">Initiate Consent</h3>
-                <p>To begin the process, you should call the POST /authorise endpoint to obtain an intent-id. Please refer to the swagger file specification for details. </p>
-                <p>The data you need to provide includes:</p>
-                <table class="table table-bordered table-striped table-detail">
-                    <tbody>
-                    <tr>
-                        <td>interface</td>
-                        <td> An id associated with our interface – please use the following:<br> <script>
-                            document.write(_config.iface_uuid);
-                        </script>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>uuid</td>
-                        <td>a unique identifier which you should create to track a user’s authorisation end to end. In Production we will validate that the uuid is unique, and a request will be rejected if it is found to be duplicated. To assist your development, we do not enforce uniqueness in Sandbox.</td>
-                    </tr>
-                    <tr>
-                        <td>scope</td>
-                        <td>Either “aisp” for account access or “pisp” for payment initiation</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <p>This request requires Basic Authorization to be provided in the form of a Base64 encoded client_id and client_secret. You must also sign the request by including a valid JTW in the “x-jws-signature” header (see Certificate Based Signing below for more details)</p>
-                <p>You will receive an “intent-id” in response which you should use in the following redirect.</p>
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
-                <h3 id="psu_auth">PSU Authorisation</h3>
-                <p>Now, simply redirect the user to our authorisation page, including the intent-id as the resource e.g.</p>
+                    <h3 id="state_uuid">Initiate Consent</h3>
+                    <p>To begin the process, you should call the POST /authorise endpoint to obtain an intent-id. Please
+                        refer to the swagger file specification for details. </p>
+                    <p>The data you need to provide includes:</p>
+                    <table class="table table-bordered table-striped table-detail">
+                        <tbody>
+                            <tr>
+                                <td>interface</td>
+                                <td> An id associated with our interface – please use the following:<br>
+                                    <script>
+                                        document.write(_config.iface_uuid);
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>uuid</td>
+                                <td>A unique identifier which you should create to track a user’s authorisation end to
+                                    end. In Production we will validate that the uuid is unique, and a request will be
+                                    rejected if it is found to be duplicated. To assist your development, we do not
+                                    enforce uniqueness in Sandbox.</td>
+                            </tr>
+                            <tr>
+                                <td>scope</td>
+                                <td>Use “aisp”<span class="pisp"> for account access or “pisp” for payment
+                                        initiation</span></td>
+                            </tr>
 
-                <p>Sandbox URL</p>
-                <pre>https://auth-sandbox.tell.money/authorise/{intent-id}</pre>
-                <p>Production URL</p>
-                <pre>https://auth.tell.money/authorise/{intent-id}</pre>
+                            <tr class="pisp">
+                                <td>payinfo</td>
+                                <td>This is required if the scope is “pisp” i.e. the consent relates to a payment
+                                    initation. You should provide a JSON Object specifying the payee/recipient, amount
+                                    and other related information. Full details can be found in the API Spec.</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <p>{{Tell-Client}} will then guide the consumer through a consent journey which involves both user authentication and authorisation.</p>
-
-                <hr class="hr-dash my-7">
-
-                <h3 id="auth_confirm">Authorisation Confirmation</h3>
-                <p>In cases of both Pass & Fail when obtaining consent authorisation, we will redirect the consumer to the Redirect URL specified when you registered the application*.</p>
-                <p>   * If you have not yet provided your own Redirect URL in the Sandbox environment, requests will be returned to our stubbed page, which presents a textual version of the response including the outcome and authorisation code, allowing you to manually proceed.</p>
-                <p>   The response will also include the "uuid" value you created earlier in the process and the intend-id that we issued. This can be used to identify and cross reference the originating request for consent.</p>
-                <p>  If the consent authorisation was successful, we will also include an authorisation code in the query parameters.</p>
-               <p>   Redirect Response
-                </p>
-                <pre>https://{{Your Redirect URL}}?intent-id={{intent-id}}&uuid={{uuid}}&authorisation_code={{Authorisation Code}}</pre>
-
-
-                <hr class="hr-dash my-7">
-
-                <h3 id="access_token">Obtain Access Token</h3>
-                <p>With the authorisation code returned, your application can now request an Access Token which can in turn be used to access the account resource information or initiate a payment.</p>
-                <p> The authorisation code is valid for 60 seconds, so your application must exchange it for an access token within that timeframe or the consent authorisation will need to be repeated.</p>
-                <p> This is done using the POST /access-token endpoint, providing the details as set out in the specification.</p>
-                <p> In the request, set grant_type to ”authorization_code” and code to the authorisation code received in the redirect.</p>
-                <p> This request requires Basic Authorization to be provided in the form of a Base64 encoded client_id and client_secret. You must also sign the request by including a valid JTW in the “x-jws-signature” header (see Certificate Based Signing below for more details)</p>
-                <p> The access token returned will permit access to the consumer data / payment initiation endpoint for a maximum of 1 hour at which point the access token will need to be refreshed.</p>
+                    <p>This request requires Basic Authorization to be provided in the form of a Base64 encoded
+                        client_id and client_secret. You must also sign the request by including a valid JTW in the
+                        “x-jws-signature” header (see Message Signing below for more details)</p>
+                    <p>You will receive two values in response:
+                        <ul>
+                            <li>
+                                - an <strong>intent-id</strong> - this is our reference for the request
+                            </li>
+                            <li>
+                                - a <strong>location</strong> - this is where you should redirect the user for authentication
+                            </li>
+                        </ul></p>
+                    <hr class="hr-dash my-7">
 
 
-                <p>Example Access Token Response</p>
-                <pre>{
-       "access_token": {{Your new valid access token}},
-       "refresh_token": {{Your new valid refresh token}},
-       "token_type": "Bearer",
-       "expires_in": 3600,
-       "scope": "balance:read,product:read,accounts:read,beneficiaries:read"
+                    <h3 id="psu_auth">PSU Authorisation</h3>
+                    <p>Now, simply redirect the user to the <strong>location</strong> you received in the previous step.</p>
+
+                    <p>{{Tell-Client}} will then guide the consumer through a consent journey which involves both user
+                        authentication and authorisation.</p>
+
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="auth_confirm">Authorisation Confirmation</h3>
+                    <p>In cases of both Pass & Fail when obtaining consent authorisation, we will redirect the consumer
+                        to the Redirect URL specified when you registered the application*.</p>
+                    <p> * If you have not yet provided your own Redirect URL in the Sandbox environment, requests will
+                        be returned to our stubbed page, which presents a textual version of the response including the
+                        outcome and authorisation code, allowing you to manually proceed.</p>
+                    <p> The response will also include the "uuid" value you created earlier in the process and the
+                        intend-id that we issued. This can be used to identify and cross reference the originating
+                        request for consent.</p>
+                    <p> If the consent authorisation was successful, we will also include an authorisation code in the
+                        query parameters.</p>
+                    <p> Redirect Response
+                    </p>
+                    <pre>https://{{Your Redirect URL}}?intent-id={{intent-id}}&uuid={{uuid}}&authorisation_code={{Authorisation Code}}</pre>
+
+
+                    <hr class="hr-dash my-7">
+
+                    <h3 id="access_token">Obtain Access Token</h3>
+                    <p>With the authorisation code returned, your application can now request an Access Token which can
+                        in turn be used to access the account resource information or initiate a payment.</p>
+                    <p> The authorisation code is valid for 60 seconds, so your application must exchange it for an
+                        access token within that timeframe or the consent authorisation will need to be repeated.</p>
+                    <p> This is done using the <strong>POST /access-token</strong> endpoint, providing the details as
+                        set out in the
+                        specification.</p>
+                    <p> In the request, set grant_type to ”authorization_code” and code to the authorisation code
+                        received in the redirect.</p>
+                    <p> This request requires Basic Authorization to be provided in the form of a Base64 encoded
+                        client_id and client_secret. You must also sign the request by including a valid JTW in the
+                        “x-jws-signature” header (see Message Signing below for more details)</p>
+                    <p> The access token returned will permit access to the consumer data / payment initiation endpoint
+                        for a maximum of 1 hour at which point the access token will need to be refreshed.</p>
+
+
+                    <p>Example Access Token Response</p>
+                    <pre>{
+    "access_token": {{Your new valid access token}},
+    "refresh_token": {{Your new valid refresh token}},
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "scope": "balance:read,product:read,accounts:read,beneficiaries:read"
 }</pre>
 
-                <table class="table table-bordered table-striped table-detail">
-                    <tbody>
-                    <tr>
-                        <td>access_token</td>
-                        <td>An access token that can be used to make requests for this account holder / consent </td>
-                    </tr>
-                    <tr>
-                        <td>refresh_token</td>
-                        <td>A refresh token that should be stored securely and used to refresh the access token when it expires</td>
-                    </tr>
-                    <tr>
-                        <td>token_type</td>
-                        <td>Will always be “Bearer”</td>
-                    </tr>
-                    <tr>
-                        <td>expires_in</td>
-                        <td>The duration in minutes that the access_token will be valid for (will typically be 3600)</td>
-                    </tr>
-                    <tr>
-                        <td>scope</td>
-                        <td>This contains a set of permissions associated with the consent. It is a comma-separated list in the format:
-                            balance:read,product:read,accounts:read,beneficiaries:read
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                    <table class="table table-bordered table-striped table-detail">
+                        <tbody>
+                            <tr>
+                                <td>access_token</td>
+                                <td>An access token that can be used to make requests for this account holder / consent
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>refresh_token</td>
+                                <td>A refresh token that should be stored securely and used to refresh the access token
+                                    when it expires</td>
+                            </tr>
+                            <tr>
+                                <td>token_type</td>
+                                <td>Will always be “Bearer”</td>
+                            </tr>
+                            <tr>
+                                <td>expires_in</td>
+                                <td>The duration in minutes that the access_token will be valid for (will typically be
+                                    3600)</td>
+                            </tr>
+                            <tr>
+                                <td>scope</td>
+                                <td>This contains a set of permissions associated with the consent. It is a
+                                    comma-separated list in the format:
+                                    balance:read,product:read,accounts:read,beneficiaries:read
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
 
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
-                <h3 id="refresh_token">Refresh Access Token</h3>
-                <p>When an access token has expired, you can utilise the stored refresh token to generate a new access token using the refresh token grant. Refresh tokens expire automatically after 90 days and new refresh tokens are issued after each use of the refresh token grant.</p>
-                <p>The API call is the same as for obtaining an access token described above, but with a grant_type of “refresh_code” and providing the refresh token in the code field.</p>
+                    <h3 id="refresh_token">Refresh Access Token</h3>
+                    <p>When an access token has expired, you can utilise the stored refresh token to generate a new
+                        access token using the refresh token grant. Refresh tokens expire automatically after 90 days
+                        and new refresh tokens are issued after each use of the refresh token grant.</p>
+                    <p>The API call is the same as for obtaining an access token described above, but with a grant_type
+                        of “refresh_code” and providing the refresh token in the code field.</p>
 
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
-                <p>Refresh Token Request </p>
-                <table class="table table-bordered table-striped table-detail">
-                    <tbody>
-                    <tr>
-                        <td>Sandbox URL</td>
-                        <td>https://api.tell.money/sandbox/oauth/access-token or</br>
-                            https://api.tell.money/sandbox/oauth/access-token/eidas
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Production URL</td>
-                        <td>https://api.tell.money/v1/oauth/access-token or</br>
-                            https://api.tell.money/v1/oauth/access-token/eidas
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Method:</td>
-                        <td>POST</td>
-                    </tr>
-                    <tr>
-                        <td>Headers:</td>
-                        <td>“Content-Type”: “application/x-www-form-urlencoded”<br>
-                            “Authorization”: Basic client_id:client:secret (base64 encoded) or<br>
-                            “Authorization”: Bearer (see certificate-based signing)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Body:</td>
-                        <td>“grant_type”: refresh_token<br>
-                            “refresh_token” the refresh_token provided initially
-
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <p>Example Refresh Token Response</p>
-                <pre>{
-            "access_token": {{Your new valid access token}},
-            "refresh_token": {{Your new valid refresh token}},
-            "token_type": "Bearer", // Always "Bearer"
-            "expires_in": 3600, // Default 1 hour. Can be adjusted on request
-            "scope": "balance:read,product:read,accounts:read,beneficiaries:read"
+                    <p>Example Refresh Token Response</p>
+                    <pre>{
+    "access_token": {{Your new valid access token}},
+    "refresh_token": {{Your new valid refresh token}},
+    "token_type": "Bearer", // Always "Bearer"
+    "expires_in": 3600, // Default 1 hour. Can be adjusted on request
+    "scope": "balance:read,product:read,accounts:read,beneficiaries:read"
 }</pre>
 
-                <!--
+                    <h3 id="cons_manage">Revoked Consent</h3>
+                    <p>A consumer may choose to revoke consent at any time. We do not proactively inform TPPs of
+                        revoked
+                        consents.</p>
+
+
+                    <hr class="hr-dash my-7">
+
+                    <!--
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 | Components
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 !-->
-                <h2 id="acc_access">Account Access</h2>
-                <p>With a valid consent and access token of type “aisp”, you can now start retrieving information from {{Tell-Client}} accounts.</p>
-                <p>Requests directly initiated by user activity (i.e. from your website or mobile application) must include the user’s IP address in a “x-user-ip” header. Requests initiated directly from your application (e.g. automated data sweeps, where the user has not manually instigated the task) should omit the “x-user-ip” header. Requests that are not initiated by the user are restricted to a maximum of 4 per endpoint per day.
-                </p>
-                <p>These requests require Authorization in the form of a Bearer Token, which is the Access Token described above. You must also sign the request by including a valid JTW in the “x-jws-signature” header (see Certificate Based Signing below for more details)</p>
+                    <h2 id="acc_access">Account Access</h2>
+                    <p>With a valid consent and access token of type “aisp”, you can now start retrieving information
+                        from {{Tell-Client}} accounts.</p>
+                    <p>Requests directly initiated by user activity (i.e. from your website or mobile application) must
+                        include the user’s IP address in a “x-user-ip” header. Requests initiated directly from your
+                        application (e.g. automated data sweeps, where the user has not manually instigated the task)
+                        should omit the “x-user-ip” header. Requests that are not initiated by the user are restricted
+                        to a maximum of 4 per endpoint per day.
+                    </p>
+                    <p>These requests require Authorization in the form of a Bearer Token, which is the Access Token
+                        described above. You must also sign the request by including a valid JTW in the
+                        “x-jws-signature” header (see Message Signing below for more details)</p>
 
 
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
-                <h2 id="pay_initiation" class="pisp_functionality">Payment Initiation</h2>
-                <p class="pisp_functionality">With a valid consent and access token of type “pisp”, you can now submit a single payment initiation on behalf of the user.</p>
-                <p class="pisp_functionality">These requests require Authorization in the form of a Bearer Token, which is the Access Token described above. You must also sign the request by including a valid JTW in the “x-jws-signature” header (see Certificate Based Signing below for more details)</p>
+                    <div class="pisp">
+                        <h2 id="pay_initiation" class="pisp_functionality">Payment Initiation</h2>
+                        <p class="pisp_functionality">With a valid consent and access token of type “pisp”, you can now
+                            submit a single payment initiation on behalf of the user.</p>
+                        <p class="pisp_functionality">These requests require Authorization in the form of a Bearer
+                            Token,
+                            which is the Access Token described above. You must also sign the request by including a
+                            valid
+                            JTW in the “x-jws-signature” header (see Message Signing below for more details)
+                        </p>
 
-                <hr class="hr-dash my-7">
+                        <hr class="hr-dash my-7">
+                    </div>
 
-                <h2 id="cons_manage">Revoked Consent</h2>
-                <p>A consumer may choose to revoke consent at any time. We do not proactively inform TPPs of revoked consents.</p>
-
-
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
-                <h3 id="client_signing">Certificate-Based Signing</h3>
-                <p>All API calls must be secured with valid Authorization (see above for details) and must also be signed using a certificate that you upload and assign within the Portal. </p>
-                <p>Please ensure you have uploaded and registered your certificate against your application within the portal. When you register a certificate, you will be issued a unique Key ID – please keep this secure as it will be required for message signing.</p>
-                <p>You should construct a JWT token - see https://jwt.io/ for more detailed instructions. The specific format required is as follows:</p>
+                    <h2 id="client_signing">Message Signing</h2>
+                    <p>All API calls must be secured with valid Authorization (see above for details) and must also be
+                        signed using a certificate that you upload and assign within the Portal. </p>
+                    <p>Please ensure you have uploaded and registered your certificate against your application within
+                        the portal. When you register a certificate, you will be issued a unique Key ID – please keep
+                        this secure as it will be required for message signing.</p>
+                    <p>You should construct a JWT token - see https://jwt.io/ for more detailed instructions. The
+                        specific format required is as follows:</p>
 
-                <p>Header:</p>
+                    <p>Header:</p>
 
-                <pre>{
+                    <pre>{
 "alg": "HS256",
 "typ": "JWT",
 "app": {{uuid of your app – this is available in the Portal}},
@@ -428,107 +480,118 @@
 }</pre>
 
 
-                <p>Payload:</p>
-                <table class="table table-bordered table-striped table-detail">
-                    <tbody>
-                    <tr>
-                        <td>interface</td>
-                        <td><script>document.write(_config.iface_uuid);</script></td>
-                    </tr>
-                    <tr>
-                        <td>scope</td>
-                        <td>{{aisp or pisp}}</td>
-                    </tr>
-                    <tr>
-                        <td>uuid</td>
-                        <td>{{generate by your application}}</td>
-                    </tr>
+                    <p>Payload:</p>
+                    <table class="table table-bordered table-striped table-detail">
+                        <tbody>
+                            <tr>
+                                <td>interface</td>
+                                <td>
+                                    <script>document.write(_config.iface_uuid);</script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>scope</td>
+                                <td>{{aisp or pisp}}</td>
+                            </tr>
+                            <tr>
+                                <td>uuid</td>
+                                <td>{{generate by your application}}</td>
+                            </tr>
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
 
 
-<p>For instructions on how to sign and construct the full token, please refer to the JWT website or other information sources.</p>
-                <!--
+                    <p>For instructions on how to sign and construct the full token, please refer to the JWT website or
+                        other information sources.</p>
+                    <!--
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
                 | Components
                 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-                !-->   <hr class="hr-dash my-7">
-                <h2 id="golive">Going Live</h2>
-                <p >When you’re ready to move into production, simply log into the portal, select the application and click “request go-live”. Our team will carry out a series of checks and may be in touch if we require any further information or testing, after which, we will release your application access into Production. </p>
+                !-->
+                    <hr class="hr-dash my-7">
+                    <h2 id="golive">Going Live</h2>
+                    <p>When you’re ready to move into production, simply log into the portal, select the application and
+                        click “request go-live”. Our team will carry out a series of checks and may be in touch if we
+                        require any further information or testing, after which, we will release your application access
+                        into Production. </p>
 
 
-                <hr class="hr-dash my-7">
+                    <hr class="hr-dash my-7">
 
 
 
+
+                </div>
 
             </div>
-
         </div>
-    </div>
-</main><!-- /.main-content -->
+    </main><!-- /.main-content -->
 
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row gap-y align-items-center">
-            <div class="col-md-2">
-                <a class="nav-link" href="http://connect.tell.money">
-                    <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="nav justify-content-center justify-content-md-start">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="./specs">Specifications</a>
-                    <a class="nav-link" href="./get-started">Getting Started</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gap-y align-items-center">
+                <div class="col-md-2">
+                    <a class="nav-link" href="http://connect.tell.money">
+                        <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="nav justify-content-center justify-content-md-start">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="./specs">Specifications</a>
+                        <a class="nav-link" href="./get-started">Getting Started</a>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
                 </div>
             </div>
-            <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
-            </div>
-        </div>
-        <div class="row gap-y align-items-center">
-            <div class="col-md-12" style="
+            <div class="row gap-y align-items-center">
+                <div class="col-md-12" style="
     font-size: 12px;
     text-align: center;
-    color: #989797;
+    color: #989797; 
 ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+            </div>
         </div>
+    </footer>
+    <div id="loader-wrapper">
+        <span class="loading_a">t<span class="period">.</span></span>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
     </div>
-</footer>
-<div id="loader-wrapper">
-    <span class="loading_a">t<span class="period">.</span></span>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-</div>
-<!-- /.footer -->
+    <!-- /.footer -->
 
 
-<!-- Site Configuration Data -->
+    <!-- Site Configuration Data -->
 
-<script src="./assets/data/site_data.js"></script>
-<!-- /Site Configuration Data -->
+    <script src="./assets/data/site_data.js"></script>
+    <!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = 'Your Apps';var pi = 'AppsMain';  </script>
-<!-- /Page Configuration Data -->
+    <!-- Page Configuration Data -->
+    <script> var pmi = 'Your Apps'; var pi = 'AppsMain';  </script>
+    <!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/howitworks.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/js/page.min.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/general.js"></script>
+    <script src="./assets/js/underscore.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/howitworks.js?v=1"></script>
+    <script src="./assets/js/v_logic.js"></script>
 
+    <script>
+        if (_config.pisp === false) {
+            $(".pisp").hide();
+        }
+    </script>
 
-
-<!-- /.Scripts -->
-
+    <!-- /.Scripts -->
 
 </body>
+
 </html>
