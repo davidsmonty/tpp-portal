@@ -27,12 +27,34 @@
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
 
-    <script src="./assets/aspsp-assets/config.js"></script>
+    <!--    <script src="./assets/aspsp-assets/config.js"></script> -->
+    <script src="./assets/js/page.min.js"></script>
+
     <script>
-        console.log(window.location.hostname);
         const hostnameArray = window.location.hostname.split('.');
-        console.log(JSON.stringify(hostnameArray[0]));
+        let subdomain = hostnameArray[0];
+        let version = 'v1';
+
+        if (subdomain === '') {
+            subdomain = 'lanistardev';
+        }
+
+        if (subdomain.slice(subdomain.length - 3) === 'dev') version = 'dev';
+
+        var get_config = $.ajax({
+            type: "GET",
+            url: "https://system.tell.money/" + version + "/tpp/config/" + subdomain,
+            async: false,
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).done(function (result) {
+        });
+        const _config = get_config.responseJSON
+
+
     </script>
+
 
 </head>
 
@@ -585,7 +607,6 @@
     <!-- /Page Configuration Data -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./assets/js/page.min.js"></script>
     <script src="./assets/js/auth.js"></script>
     <script src="./assets/js/general.js"></script>
     <script src="./assets/js/underscore.js"></script>
@@ -595,10 +616,12 @@
 
 
     <script>
-        if (_config.pisp === false) {
+        if (_config.pisp === 0) {
             $(".pisp").hide();
         }
     </script>
+
+
 
     <!-- /.Scripts -->
 
