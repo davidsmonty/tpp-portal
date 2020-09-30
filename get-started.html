@@ -28,6 +28,16 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
     <script src="./assets/aspsp-assets/config.js"></script>
 
+<script>
+    var req = new XMLHttpRequest();
+    console.log(req)
+    req.open('GET', document.location, false);
+    req.send(null);
+    var headers = req.getAllResponseHeaders().toLowerCase();
+    console.log(headers)
+
+</script>
+
 </head>
 
 <body>
