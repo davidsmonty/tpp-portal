@@ -19,6 +19,17 @@
 	<script>
 		newPageTitle = _config.client_name; 
 		document.title = newPageTitle; 
+
+		var logodark = "./assets/aspsp-assets/" + _config.subdomain + "/logo-dark.png";
+		var logolight = "./assets/aspsp-assets/" + _config.subdomain + "/logo-light.png";
+		function loadGraphics(){
+			document.getElementById("logo-dark").src = logodark;
+			document.getElementById("logo-light").src = logolight;
+		}
+		window.onload = function(){
+			loadGraphics();
+		};
+
 	</script>
 
 	<!-- Styles -->
@@ -46,8 +57,12 @@
 			<div class="navbar-left">
 				<button class="navbar-toggler" type="button">&#9776;</button>
 				<a class="navbar-brand" href="/">
-					<script> document.write('<img class="logo-dark" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-dark.png" alt="logo">');</script>
-					<script> document.write('<img class="logo-light" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-light.png" alt="logo">');</script>
+					<div id="loadImage-wrap">
+						<img id="loadImage" />
+					</div>
+					
+					<img id="logo-dark" class="logo-dark" alt="logo">
+					<img id="logo-light" class="logo-light" alt="logo">
 				</a>
 			</div>
 			<section class="navbar-mobile">
