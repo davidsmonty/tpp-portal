@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Client Config -->
+    <script src="./assets/aspsp-assets/config.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -10,7 +15,7 @@
     <meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
 
     <!-- Page Title -->
-    <title>{{Tell-Client}} Developer Center — The Open Banking Lite Solution. Powered By Tell Connect</title>
+    <script> document.write('<title>' + _config.client_name + ' Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>');</script>
 
     <!-- Styles -->
     <link href="assets/css/admin-app.css?v=1" rel="stylesheet" />
@@ -19,26 +24,26 @@
     <link href="./assets/css/themify-icons.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="icon" href="./assets/aspsp-assets/favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-    <link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+    <link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+    <link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
+
 </head>
 
 <body>
 
+    <!-- Navbar -->
 
-<!-- Navbar -->
-
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-    <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="/">
+                    <script> document.write('<img class="logo-dark" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-dark.png" alt="logo">');</script>
+                    <script> document.write('<img class="logo-light" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-light.png" alt="logo">');</script>
             </a>
         </div>
         <section class="navbar-mobile">

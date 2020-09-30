@@ -1,83 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="The Open Banking Lite Platform, PSD2, API, Connect">
-	<meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
+
+  <!-- Client Config -->
+  <script src="./assets/aspsp-assets/config.js"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The Open Banking Lite Platform, PSD2, API, Connect">
+  <meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
 
   <!-- Page Title -->
-	<title>{{Tell-Client}} Developer Center — The Open Banking Lite Solution. Powered By Tell Connect</title>
+  <script> document.write('<title>' + _config.client_name + ' Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>');</script>
 
   <!-- Styles -->
-	<link href="./assets/css/page.min.css" rel="stylesheet">
-	<link href="./assets/css/style.css" rel="stylesheet">
-	<link href="./assets/css/themify-icons.css" rel="stylesheet">
+  <link href="assets/css/admin-app.css?v=1" rel="stylesheet" />
+  <link href="./assets/css/page.min.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link href="./assets/css/themify-icons.css" rel="stylesheet">
 
   <!-- Favicons -->
-	<link rel="icon" href="./assets/aspsp-assets/favicon.png">
-	<link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-	<link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+  <link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+  <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+  <link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+  <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
     <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
-            </a>
-        </div>
-        <section class="navbar-mobile">
-            <ul class="nav nav-navbar mr-auto">
-            </ul>
-            <div class="w-30">
-                <div class="flex" id="greeting-options" style="display: none">
-                    <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-                    <!-- BEGIN: Account Menu -->
-                    <div class="intro-x dropdown w-60 h-8 relative">
-                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                            <img id="profile-picture--header" alt="ProfilePic" src="">
-                        </div>
-                        <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                                <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium full-name"></div>
-                                    <div class="text-xs text-theme-41 role-name"></div>
-                                </div>
-                                <div class="p-2" id="profile_menu">
-                                </div>
-                                <div class="p-2 border-t border-theme-40">
-                                    <a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END: Account Menu -->
+      <div class="navbar-left">
+        <button class="navbar-toggler" type="button">&#9776;</button>
+        <a class="navbar-brand" href="/">
+          <script> document.write('<img class="logo-dark" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-dark.png" alt="logo">');</script>
+          <script> document.write('<img class="logo-light" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-light.png" alt="logo">');</script>
+        </a>
+      </div>
+      <section class="navbar-mobile">
+        <ul class="nav nav-navbar mr-auto">
+        </ul>
+        <div class="w-30">
+          <div class="flex" id="greeting-options" style="display: none">
+            <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+            <!-- BEGIN: Account Menu -->
+            <div class="intro-x dropdown w-60 h-8 relative">
+              <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                <img id="profile-picture--header" alt="ProfilePic" src="">
+              </div>
+              <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+                <div class="dropdown-box__content box bg-theme-38 text-white">
+                  <div class="p-4 border-b border-theme-40">
+                    <div class="font-medium full-name"></div>
+                    <div class="text-xs text-theme-41 role-name"></div>
+                  </div>
+                  <div class="p-2" id="profile_menu">
+                  </div>
+                  <div class="p-2 border-t border-theme-40">
+                    <a
+                      class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+                      <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                  </div>
                 </div>
-                <div id="logInBox">
-                    <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-                    <a class="btn btn-sm btn-success" href="./login">Sign In</a>
-                </div>
+              </div>
             </div>
-        </section>
+            <!-- END: Account Menu -->
+          </div>
+          <div id="logInBox">
+            <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+            <a class="btn btn-sm btn-success" href="./login">Sign In</a>
+          </div>
+        </div>
+      </section>
     </div>
-</nav>
-<!-- /.navbar -->
+  </nav>
+  <!-- /.navbar -->
 
 
-    <!-- Header
+  <!-- Header
     <header class="header" >
       <div class="container">
         <div class="row align-items-center">
@@ -94,46 +103,50 @@
 
         </div>
       </div>
-    </header>--><!-- /.header -->
+    </header>-->
+  <!-- /.header -->
 
 
-    <!-- Main Content -->
-    <main class="main-content body-main">
-      <section class="section text-center">
+  <!-- Main Content -->
+  <main class="main-content body-main">
+    <section class="section text-center">
 
-        <h1 class="display-1 text-muted my-7">oops something went wrong!</h1>
-        <p class="lead">Seems like something isnt configured correctly. We have been notified and will sort it out asap.</p>
-        <br>
-        <button class="btn btn-secondary w-150 mr-2" type="button" onclick="window.history.back();">Go back</button>
-        <a class="btn btn-secondary w-150" href="../index.html">Return Home</a>
-
-        
-    </main><!-- /.main-content --><!-- /.main-content -->
+      <h1 class="display-1 text-muted my-7">oops something went wrong!</h1>
+      <p class="lead">Seems like something isnt configured correctly. We have been notified and will sort it out asap.
+      </p>
+      <br>
+      <button class="btn btn-secondary w-150 mr-2" type="button" onclick="window.history.back();">Go back</button>
+      <a class="btn btn-secondary w-150" href="../index.html">Return Home</a>
 
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row gap-y align-items-center">
-          <div class="col-md-2">
-              <a class="nav-link" href="https://tell.money"><img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo"></a>
-          </div>
-          <div class="col-md-8">
+  </main><!-- /.main-content -->
+  <!-- /.main-content -->
 
-            <div class="nav justify-content-center justify-content-md-start">
 
-              <a class="nav-link" href="/">Home</a>
-              <a class="nav-link" href="./specs">Specifications</a>
-              <a class="nav-link" href="./get-started">Getting Started</a>
-              </div>
-          </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gap-y align-items-center">
+        <div class="col-md-2">
+          <a class="nav-link" href="https://tell.money"><img class="logo-dark" src="./assets/img/tell-connect-logo.png"
+              alt="Tell Logo"></a>
+        </div>
+        <div class="col-md-8">
 
-          <div class="col-md-2 text-center text-md-right">
-            <a href="http://connect.tell.money">© Tell Money Limited</a>
+          <div class="nav justify-content-center justify-content-md-start">
+
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="./specs">Specifications</a>
+            <a class="nav-link" href="./get-started">Getting Started</a>
           </div>
         </div>
+
+        <div class="col-md-2 text-center text-md-right">
+          <a href="http://connect.tell.money">© Tell Money Limited</a>
+        </div>
       </div>
-    </footer><!-- /.footer -->
+    </div>
+  </footer><!-- /.footer -->
 
 
   <!-- Site Configuration Data -->
@@ -142,7 +155,7 @@
   <!-- /Site Configuration Data -->
 
   <!-- Page Configuration Data -->
-  <script> var pmi = 'Organisation';var pi = 'OrganisationProfile';  </script>
+  <script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
   <!-- /Page Configuration Data -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -160,8 +173,5 @@
 
 
 </body>
+
 </html>
-
-
-
-

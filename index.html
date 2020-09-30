@@ -3,6 +3,7 @@
 
 <head>
 
+	<!-- Client Config -->
 	<script src="./assets/aspsp-assets/config.js"></script>
 
 	<meta charset="utf-8">
@@ -14,7 +15,7 @@
 	<meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
 
 	<!-- Page Title -->
-	<title><script> document.write(_config.client_name);</script> Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>
+	<script> document.write('<title>' + _config.client_name + ' Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>');</script>
 
 	<!-- Styles -->
 	<link href="assets/css/admin-app.css?v=1" rel="stylesheet" />
@@ -23,13 +24,12 @@
 	<link href="./assets/css/themify-icons.css" rel="stylesheet">
 
 	<!-- Favicons -->
-	<link rel="icon" href="./assets/aspsp-assets/favicon.png">
-	<link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-	<link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
-	
+	<link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+	<link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+	<link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
 
 </head>
 
@@ -42,8 +42,8 @@
 			<div class="navbar-left">
 				<button class="navbar-toggler" type="button">&#9776;</button>
 				<a class="navbar-brand" href="/">
-					<img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-					<img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
+					<script> document.write('<img class="logo-dark" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-dark.png" alt="logo">');</script>
+					<script> document.write('<img class="logo-light" src="./assets/aspsp-assets/' + _config.subdomain + '/logo-light.png" alt="logo">');</script>
 				</a>
 			</div>
 			<section class="navbar-mobile">
@@ -94,10 +94,14 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<h1 style="text-align: left;">Developer Centre</h1>
-					<p class="lead mt-5 mb-8"><script> document.write(_config.client_name);</script> have partnered with Tell Connect to bring developers a
+					<p class="lead mt-5 mb-8">
+						<script> document.write(_config.client_name);</script> have partnered with Tell Connect to bring
+						developers a
 						suite of APIs which allow regulated Third Party Providers to retrieve a full suite of data from
 						consented accounts.
-						<br>Integrating with <script> document.write(_config.client_name);</script> using open banking is now easier than ever.</p>
+						<br>Integrating with
+						<script> document.write(_config.client_name);</script> using open banking is now easier than
+						ever.</p>
 				</div>
 				<div class="col-lg-5 ml-auto d-none d-lg-block">
 					<img src="./assets/img/home.png" alt="img">
@@ -117,7 +121,8 @@
 							<p><i class="ti-agenda lead-7 text-primary"></i>
 							</p>
 							<h5 class="fw-500 my-4">Getting Started</h5>
-							<p class="mb-0">Begin interacting with the <script> document.write(_config.client_name);</script> APIs (powered by Tell Connect).
+							<p class="mb-0">Begin interacting with the
+								<script> document.write(_config.client_name);</script> APIs (powered by Tell Connect).
 							</p>
 						</a>
 					</div>
