@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Client Config -->
+    <script src="./assets/aspsp-assets/config.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -10,7 +15,7 @@
     <meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
 
     <!-- Page Title -->
-    <title>{{Tell-Client}} Developer Center — The Open Banking Lite Solution. Powered By Tell Connect</title>
+    <title>Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>
 
     <!-- Styles -->
     <link href="assets/css/admin-app.css?v=1" rel="stylesheet" />
@@ -18,216 +23,234 @@
     <link href="./assets/css/style.css" rel="stylesheet">
     <link href="./assets/css/themify-icons.css" rel="stylesheet">
 
-
     <!-- Favicons -->
-    <link rel="icon" href="./assets/aspsp-assets/favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-    <link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+    <link rel="icon" id="icon0">
+    <link rel="shortcut icon" sizes="196x196" id="icon1">
+    <link rel="apple-touch-icon" id="icon2">
+    <link rel="apple-touch-icon" id="icon3" sizes="76x76">
+    <link rel="apple-touch-icon" id="icon4" sizes="120x120">
+    <link rel="apple-touch-icon" id="icon5" sizes="152x152">
+
+    <!-- Defaults -->
+    <link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+    <link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-    <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
-            </a>
-        </div>
-        <section class="navbar-mobile">
-            <ul class="nav nav-navbar mr-auto">
-            </ul>
-            <div class="w-30">
-                <div class="flex" id="greeting-options" style="display: none">
-                    <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-                    <!-- BEGIN: Account Menu -->
-                    <div class="intro-x dropdown w-60 h-8 relative">
-                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                            <img id="profile-picture--header" alt="ProfilePic" src="">
-                        </div>
-                        <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                                <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium full-name"></div>
-                                    <div class="text-xs text-theme-41 role-name"></div>
-                                </div>
-                                <div class="p-2" id="profile_menu">
-                                </div>
-                                <div class="p-2 border-t border-theme-40">
-                                    <a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="/">
+                    <img id="logo-dark" class="logo-dark" alt="logo">
+                    <img id="logo-light" class="logo-light" alt="logo">
+                </a>
+            </div>
+            <section class="navbar-mobile">
+                <ul class="nav nav-navbar mr-auto">
+                </ul>
+                <div class="w-30">
+                    <div class="flex" id="greeting-options" style="display: none">
+                        <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+                        <!-- BEGIN: Account Menu -->
+                        <div class="intro-x dropdown w-60 h-8 relative">
+                            <div
+                                class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                                <img id="profile-picture--header" alt="ProfilePic" src="">
+                            </div>
+                            <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+                                <div class="dropdown-box__content box bg-theme-38 text-white">
+                                    <div class="p-4 border-b border-theme-40">
+                                        <div class="font-medium full-name"></div>
+                                        <div class="text-xs text-theme-41 role-name"></div>
+                                    </div>
+                                    <div class="p-2" id="profile_menu">
+                                    </div>
+                                    <div class="p-2 border-t border-theme-40">
+                                        <a
+                                            class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+                                            <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Account Menu -->
                     </div>
-                    <!-- END: Account Menu -->
+                    <div id="logInBox">
+                        <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+                        <a class="btn btn-sm btn-success" href="./login">Sign In</a>
+                    </div>
                 </div>
-                <div id="logInBox">
-                    <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-                    <a class="btn btn-sm btn-success" href="./login">Sign In</a>
-                </div>
-            </div>
-        </section>
-    </div>
-</nav>
-<!-- /.navbar -->
-
-
-
-<main class="main-content app">
-<div class="flex">
-    <!-- BEGIN: Side Menu -->
-    <nav class="side-nav">
-
-        <div class="side-nav__devider my-6 mt-7"></div>
-        <ul id="admin_menu">
-            <!-- BEGIN: Dynaimcally Created Side Menu -->
-            <!-- END: Dynaimcally Created Side Menu -->
-        </ul>
+            </section>
+        </div>
     </nav>
-    <!-- END: Side Menu -->
-    <!-- BEGIN: Content -->
-    <div class="content">
-        <!-- BEGIN: Top Bar -->
-        <div class="top-bar">
-            <!-- BEGIN: Breadcrumb -->
-            <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="" class="">Administration</a> <i class="ti-angle-right breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Applications</a> </div>
-            <!-- END: Breadcrumb -->
-        </div>
-        <!-- END: Top Bar -->
-        <div class="top-bar top-bar-new flex ">
-            <!-- BEGIN: Breadcrumb -->
-            <div>Sandbox Applications </div><!-- END: Breadcrumb -->
-            <div class="w-full sm:w-auto " style="padding: 10px; ">
-                <a href="/applications-add-sandbox">
-                    <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Sandbox App</button>
-                </a>
-            </div>
-        </div>
-        <div class="grid grid-cols-12 gap-6 ">
+    <!-- /.navbar -->
 
-            <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
-                <!-- BEGIN: File Manager Filter -->
-                <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
-                    <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
+
+
+    <main class="main-content app">
+        <div class="flex">
+            <!-- BEGIN: Side Menu -->
+            <nav class="side-nav">
+
+                <div class="side-nav__devider my-6 mt-7"></div>
+                <ul id="admin_menu">
+                    <!-- BEGIN: Dynaimcally Created Side Menu -->
+                    <!-- END: Dynaimcally Created Side Menu -->
+                </ul>
+            </nav>
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+                <!-- BEGIN: Top Bar -->
+                <div class="top-bar">
+                    <!-- BEGIN: Breadcrumb -->
+                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="" class="">Administration</a> <i
+                            class="ti-angle-right breadcrumb__icon"></i> <a href=""
+                            class="breadcrumb--active">Applications</a> </div>
+                    <!-- END: Breadcrumb -->
+                </div>
+                <!-- END: Top Bar -->
+                <div class="top-bar top-bar-new flex ">
+                    <!-- BEGIN: Breadcrumb -->
+                    <div>Sandbox Applications </div><!-- END: Breadcrumb -->
+                    <div class="w-full sm:w-auto " style="padding: 10px; ">
+                        <a href="/applications-add-sandbox">
+                            <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Sandbox
+                                App</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 gap-6 ">
+
+                    <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
+                        <!-- BEGIN: File Manager Filter -->
+                        <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
+                            <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
+
+
+                            </div>
+
+                        </div>
+                        <!-- END: File Manager Filter -->
+                        <!-- BEGIN: Directory & Files -->
+                        <div id="sandboxAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
+                            <div class="noApps sandboxNoApp">You don't have any sandbox applications. Click the "Create
+                                New Sandbox App" button to create one now. </div>
+                        </div>
+                        <!-- END: Directory & Files -->
+                        <!-- BEGIN: Pagination -->
+
+                        <!-- END: Pagination -->
+                    </div>
+                </div>
+                <div class="top-bar top-bar-new flex">
+                    <!-- BEGIN: Breadcrumb -->
+                    Production Applications
+                    <!-- END: Breadcrumb -->
+                    <div class="w-full sm:w-auto flex" style="padding: 10px;">
+                        <a href="/applications-add-production">
+                            <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Production
+                                App</button>
+                        </a>
+
 
 
                     </div>
-
                 </div>
-                <!-- END: File Manager Filter -->
-                <!-- BEGIN: Directory & Files -->
-                <div id="sandboxAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
-                    <div class="noApps sandboxNoApp">You don't have any sandbox applications. Click the "Create New Sandbox App" button to create one now. </div>
-                </div>
-                <!-- END: Directory & Files -->
-                <!-- BEGIN: Pagination -->
+                <div class="grid grid-cols-12 gap-6 ">
 
-                <!-- END: Pagination -->
-            </div>
-        </div>
-        <div class="top-bar top-bar-new flex">
-            <!-- BEGIN: Breadcrumb -->
-            Production Applications <!-- END: Breadcrumb -->
-            <div class="w-full sm:w-auto flex" style="padding: 10px;">
-                <a href="/applications-add-production">
-                    <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Production App</button>
-                </a>
+                    <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
+                        <!-- BEGIN: File Manager Filter -->
+                        <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
+                            <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
 
 
+                            </div>
 
-            </div>
-        </div>
-        <div class="grid grid-cols-12 gap-6 ">
+                        </div>
+                        <!-- END: File Manager Filter -->
+                        <!-- BEGIN: Directory & Files -->
+                        <div id="productionAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
 
-            <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
-                <!-- BEGIN: File Manager Filter -->
-                <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
-                    <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
+                            <div class="noApps productionNoApp">You don't have any production applications. Click the
+                                "Create New Production App" button to create one now. </div>
 
+                        </div>
+                        <!-- END: Directory & Files -->
+                        <!-- BEGIN: Pagination -->
 
+                        <!-- END: Pagination -->
                     </div>
-
-                </div>
-                <!-- END: File Manager Filter -->
-                <!-- BEGIN: Directory & Files -->
-                <div id="productionAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
-
-                        <div class="noApps productionNoApp">You don't have any production applications. Click the "Create New Production App" button to create one now. </div>
-
-                </div>
-                <!-- END: Directory & Files -->
-                <!-- BEGIN: Pagination -->
-
-                <!-- END: Pagination -->
-            </div>
-        </div>
-    </div>
-    <!-- END: Content -->
-</main>
-
-
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row gap-y align-items-center">
-            <div class="col-md-2">
-                <a class="nav-link" href="http://connect.tell.money">
-                    <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="nav justify-content-center justify-content-md-start">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="./specs">Specifications</a>
-                    <a class="nav-link" href="./get-started">Getting Started</a>
                 </div>
             </div>
-            <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
+            <!-- END: Content -->
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gap-y align-items-center">
+                <div class="col-md-2">
+                    <a class="nav-link" href="http://connect.tell.money">
+                        <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="nav justify-content-center justify-content-md-start">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="./specs">Specifications</a>
+                        <a class="nav-link" href="./get-started">Getting Started</a>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
+                </div>
             </div>
-        </div>
-        <div class="row gap-y align-items-center">
-            <div class="col-md-12" style="
+            <div class="row gap-y align-items-center">
+                <div class="col-md-12" style="
       font-size: 12px;
       text-align: center;
       color: #989797;
     ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+            </div>
         </div>
+    </footer>
     </div>
-</footer>
-</div>
-<!-- /.footer -->
+    <!-- /.footer -->
 
 
-<!-- Site Configuration Data -->
-<script src="./assets/aspsp-assets/config.js"></script>
-<script src="./assets/data/site_data.js"></script>
-<!-- /Site Configuration Data -->
+    <!-- Site Configuration Data -->
+    <script src="./assets/data/site_data.js"></script>
+    <!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = 'Your Apps';var pi = 'AppsMain';  </script>
-<!-- /Page Configuration Data -->
+    <!-- Page Configuration Data -->
+    <script> var pmi = 'Your Apps'; var pi = 'AppsMain';  </script>
+    <!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/apps.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/js/page.min.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/general.js"></script>
+    <script src="./assets/js/underscore.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/apps.js?v=1"></script>
+    <script src="./assets/js/v_logic.js"></script>
+    <script src="./assets/js/customise.js"></script>
 
 
-
-<!-- /.Scripts -->
+    <!-- /.Scripts -->
 
 
 </body>
+
 </html>

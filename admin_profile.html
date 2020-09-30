@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Client Config -->
+    <script src="./assets/aspsp-assets/config.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -10,7 +15,7 @@
     <meta name="keywords" content="Open Banking Lite, PSD2, API, Connect, ASPSP, TPP">
 
     <!-- Page Title -->
-    <title>{{Tell-Client}} Developer Center — The Open Banking Lite Solution. Powered By Tell Connect</title>
+    <title>Developer Centre — The Open Banking Lite Solution. Powered By Tell Connect</title>
 
     <!-- Styles -->
     <link href="assets/css/admin-app.css?v=1" rel="stylesheet" />
@@ -18,204 +23,249 @@
     <link href="./assets/css/style.css" rel="stylesheet">
     <link href="./assets/css/themify-icons.css" rel="stylesheet">
 
-
     <!-- Favicons -->
-    <link rel="icon" href="./assets/aspsp-assets/favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/icon-196x196.png">
-    <link rel="apple-touch-icon" href="./assets/aspsp-assets/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+    <link rel="icon" id="icon0">
+    <link rel="shortcut icon" sizes="196x196" id="icon1">
+    <link rel="apple-touch-icon" id="icon2">
+    <link rel="apple-touch-icon" id="icon3" sizes="76x76">
+    <link rel="apple-touch-icon" id="icon4" sizes="120x120">
+    <link rel="apple-touch-icon" id="icon5" sizes="152x152">
+
+    <!-- Defaults -->
+    <link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+    <link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+    <link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-    <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="/">
+                    <img id="logo-dark" class="logo-dark" alt="logo">
+                    <img id="logo-light" class="logo-light" alt="logo">
+                </a>
+            </div>
+            <section class="navbar-mobile">
+                <ul class="nav nav-navbar mr-auto">
+                </ul>
+                <div class="w-30">
+                    <div class="flex" id="greeting-options" style="display: none">
+                        <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+                        <!-- BEGIN: Account Menu -->
+                        <div class="intro-x dropdown w-60 h-8 relative">
+                            <div
+                                class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                                <img id="profile-picture--header" alt="ProfilePic" src="">
+                            </div>
+                            <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+                                <div class="dropdown-box__content box bg-theme-38 text-white">
+                                    <div class="p-4 border-b border-theme-40">
+                                        <div class="font-medium full-name"></div>
+                                        <div class="text-xs text-theme-41 role-name"></div>
+                                    </div>
+                                    <div class="p-2" id="profile_menu">
+                                    </div>
+                                    <div class="p-2 border-t border-theme-40">
+                                        <a
+                                            class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+                                            <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Account Menu -->
+                    </div>
+                    <div id="logInBox">
+                        <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+                        <a class="btn btn-sm btn-success" href="./login">Sign In</a>
+                    </div>
+                </div>
+            </section>
         </div>
-        <section class="navbar-mobile">
-            <ul class="nav nav-navbar mr-auto">
-            </ul>
-            <div class="w-30">
-                <div class="flex" id="greeting-options" style="display: none">
-                    <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-                    <!-- BEGIN: Account Menu -->
-                    <div class="intro-x dropdown w-60 h-8 relative">
-                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                            <img id="profile-picture--header" alt="ProfilePic" src="">
-                        </div>
-                        <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                                <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium full-name"></div>
-                                    <div class="text-xs text-theme-41 role-name"></div>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
+    <main class="main-content app">
+        <div class="flex">
+            <!-- BEGIN: Side Menu -->
+            <nav class="side-nav">
+
+                <div class="side-nav__devider my-6 mt-7"></div>
+                <ul id="admin_menu">
+                    <!-- BEGIN: Dynaimcally Created Side Menu -->
+                    <!-- END: Dynaimcally Created Side Menu -->
+                </ul>
+            </nav>
+            <!-- END: Side Menu -->
+            <!-- BEGIN: Content -->
+            <!-- BEGIN: Content -->
+            <div class="content">
+                <!-- BEGIN: Top Bar -->
+                <div class="top-bar">
+                    <!-- BEGIN: Breadcrumb -->
+                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a class="">Administration</a> <i
+                            class="ti-angle-right breadcrumb__icon"></i> <a class="breadcrumb--active">Profile</a> <i
+                            class="ti-angle-right breadcrumb__icon"></i> <a class="breadcrumb--active">Personal
+                            Information</a> </div>
+                    <!-- END: Breadcrumb -->
+                </div>
+                <!-- END: Top Bar -->
+                <div class="intro-y flex items-center mt-5">
+                    <h2 class="text-lg font-medium mr-auto">
+                        Update Profile
+                    </h2>
+                </div>
+                <div class="grid grid-cols-12 gap-6">
+                    <!-- BEGIN: Profile Menu -->
+                    <div class="col-span-12 lg:col-span-4 xxl:col-span-3 flex lg:block flex-col-reverse">
+                        <div class="intro-y box mt-5">
+                            <div class="relative flex items-center p-5">
+                                <div class="w-12 h-12 image-fit">
+                                    <img alt="Your Profile Picture" id="profile_pic_small" class="rounded-full" src="">
                                 </div>
-                                <div class="p-2" id="profile_menu">
+                                <div class="ml-4 mr-auto">
+                                    <div id="profile_summary_display_name" class="font-medium text-base"></div>
+                                    <div id="profile_summary_role" class="text-gray-600"></div>
+                                    <div id="profile_last_login" class="text-gray-600"></div>
                                 </div>
-                                <div class="p-2 border-t border-theme-40">
-                                    <a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
-                                </div>
+
                             </div>
+                            <div class="p-5 border-t border-gray-200">
+                                <a class="flex items-center text-theme-1 font-medium" href="./profile"> <i
+                                        data-feather="activity" class="w-4 h-4 mr-2"></i> Personal Information </a>
+                                <a class="flex items-center mt-5" href="./profile-security"> <i data-feather="lock"
+                                        class="w-4 h-4 mr-2"></i> Change Password </a>
+                                <!--<a class="flex items-center mt-5" href="./profile-mfa"> <i data-feather="settings" class="w-4 h-4 mr-2"></i> Multi-Factor Authentication </a>-->
+                            </div>
+
+
                         </div>
                     </div>
-                    <!-- END: Account Menu -->
-                </div>
-                <div id="logInBox">
-                    <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-                    <a class="btn btn-sm btn-success" href="./login">Sign In</a>
-                </div>
-            </div>
-        </section>
-    </div>
-</nav>
-<!-- /.navbar -->
-
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
-<main class="main-content app">
-    <div class="flex">
-        <!-- BEGIN: Side Menu -->
-        <nav class="side-nav">
-
-            <div class="side-nav__devider my-6 mt-7"></div>
-            <ul id="admin_menu">
-                <!-- BEGIN: Dynaimcally Created Side Menu -->
-                <!-- END: Dynaimcally Created Side Menu -->
-            </ul>
-        </nav>
-        <!-- END: Side Menu -->
-        <!-- BEGIN: Content -->
-        <!-- BEGIN: Content -->
-        <div class="content">
-            <!-- BEGIN: Top Bar -->
-            <div class="top-bar">
-                <!-- BEGIN: Breadcrumb -->
-                <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a  class="">Administration</a> <i class="ti-angle-right breadcrumb__icon"></i> <a  class="breadcrumb--active">Profile</a> <i class="ti-angle-right breadcrumb__icon"></i> <a  class="breadcrumb--active">Personal Information</a> </div>
-                <!-- END: Breadcrumb -->
-            </div>
-            <!-- END: Top Bar -->
-            <div class="intro-y flex items-center mt-5">
-                <h2 class="text-lg font-medium mr-auto">
-                    Update Profile
-                </h2>
-            </div>
-            <div class="grid grid-cols-12 gap-6">
-                <!-- BEGIN: Profile Menu -->
-                <div class="col-span-12 lg:col-span-4 xxl:col-span-3 flex lg:block flex-col-reverse">
-                    <div class="intro-y box mt-5">
-                        <div class="relative flex items-center p-5">
-                            <div class="w-12 h-12 image-fit">
-                                <img alt="Your Profile Picture" id="profile_pic_small" class="rounded-full" src="">
+                    <!-- END: Profile Menu -->
+                    <div class="col-span-12 lg:col-span-8 xxl:col-span-9">
+                        <!-- BEGIN: Display Information -->
+                        <div class="intro-y box lg:mt-5">
+                            <div class="flex items-center p-5 border-b border-gray-200">
+                                <h2 class="font-medium text-base mr-auto">
+                                    Personal Information
+                                </h2>
                             </div>
-                            <div class="ml-4 mr-auto">
-                                <div id="profile_summary_display_name" class="font-medium text-base"></div>
-                                <div id="profile_summary_role" class="text-gray-600"></div>
-                                <div id="profile_last_login" class="text-gray-600"></div>
-                            </div>
+                            <div class="p-5">
+                                <div class="grid grid-cols-12 gap-5">
+                                    <div class="col-span-12 xl:col-span-4">
+                                        <div class="border border-gray-200 rounded-md p-5">
+                                            <div
+                                                class="w-40-apps h-40-apps relative image-fit-2 cursor-pointer zoom-in mx-auto">
+                                                <img class="rounded-md" alt="Your Profile Picture"
+                                                    id="profile_pic_large" src="">
+                                                <div title="Remove this profile photo?"
+                                                    class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2">
+                                                    <i data-feather="x" class="w-4 h-4"></i> </div>
+                                            </div>
+                                            <div class="w-40 mx-auto cursor-pointer relative mt-5">
+                                                <button type="button" class="button w-full bg-theme-1 text-white">Change
+                                                    Photo</button>
+                                                <input type="file" onchange="profile.updateProfilePicture()"
+                                                    id="profile_picture_new"
+                                                    class="w-full h-full top-0 left-0 absolute opacity-0">
 
-                        </div>
-                        <div class="p-5 border-t border-gray-200">
-                            <a class="flex items-center text-theme-1 font-medium" href="./profile"> <i data-feather="activity" class="w-4 h-4 mr-2"></i> Personal Information </a>
-                            <a class="flex items-center mt-5" href="./profile-security"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Change Password </a>
-                            <!--<a class="flex items-center mt-5" href="./profile-mfa"> <i data-feather="settings" class="w-4 h-4 mr-2"></i> Multi-Factor Authentication </a>-->
-                        </div>
-
-
-                    </div>
-                </div>
-                <!-- END: Profile Menu -->
-                <div class="col-span-12 lg:col-span-8 xxl:col-span-9">
-                    <!-- BEGIN: Display Information -->
-                    <div class="intro-y box lg:mt-5">
-                        <div class="flex items-center p-5 border-b border-gray-200">
-                            <h2 class="font-medium text-base mr-auto">
-                                Personal Information
-                            </h2>
-                        </div>
-                        <div class="p-5">
-                            <div class="grid grid-cols-12 gap-5">
-                                <div class="col-span-12 xl:col-span-4">
-                                    <div class="border border-gray-200 rounded-md p-5">
-                                        <div class="w-40-apps h-40-apps relative image-fit-2 cursor-pointer zoom-in mx-auto">
-                                            <img class="rounded-md" alt="Your Profile Picture" id="profile_pic_large" src="">
-                                            <div title="Remove this profile photo?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
-                                        </div>
-                                        <div class="w-40 mx-auto cursor-pointer relative mt-5">
-                                            <button type="button" class="button w-full bg-theme-1 text-white">Change Photo</button>
-                                            <input type="file" onchange="profile.updateProfilePicture()" id="profile_picture_new" class="w-full h-full top-0 left-0 absolute opacity-0">
-
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <form id="page_form" class="col-span-12 xl:col-span-8" novalidate>
+                                    <form id="page_form" class="col-span-12 xl:col-span-8" novalidate>
 
-                                    <div class="updateAlertSuccess rounded-md flex items-center px-5 py-4 mb-5 bg-theme-18  text-center" style="display: none">
-                                        <i data-feather="alert-triangle" class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated Successfully</span><i data-feather="x" class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
-                                    </div>
-                                    <div class="updateAlertFailure rounded-md flex items-center px-5 py-4 mb-5 bg-theme-31  text-center" style="display: none">
-                                        <i data-feather="alert-triangle" class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated Error</span><i data-feather="x" class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
-                                    </div>
-                                    <div class="col-span-12 xl:col-span-8">
-                                        <div class="form-group">
-                                            <div>
-                                                <label class="flex flex-col sm:flex-row">Display Name<span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">* Mandatory</span> </label>
-                                                <input type="text" id="user_display_name" class="input w-full border bg-gray-100 cursor-not-allowed mt-2" name="user_display_name" placeholder="User Display Name">
-
-                                            </div>
+                                        <div class="updateAlertSuccess rounded-md flex items-center px-5 py-4 mb-5 bg-theme-18  text-center"
+                                            style="display: none">
+                                            <i data-feather="alert-triangle"
+                                                class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated
+                                                Successfully</span><i data-feather="x"
+                                                class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label>First Name</label>
-                                                <input type="text" id="user_first_name" class="input w-full border mt-2" placeholder="First Name" name="user_first_name"  >
-
-                                            </div>
+                                        <div class="updateAlertFailure rounded-md flex items-center px-5 py-4 mb-5 bg-theme-31  text-center"
+                                            style="display: none">
+                                            <i data-feather="alert-triangle"
+                                                class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated Error</span><i
+                                                data-feather="x"
+                                                class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label class="flex flex-col sm:flex-row">Last Name<span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">* Mandatory</span> </label>
-                                                <input type="text" class="input w-full border mt-2" placeholder="Last Name"  id="user_last_name" name="user_last_name" value="" >
+                                        <div class="col-span-12 xl:col-span-8">
+                                            <div class="form-group">
+                                                <div>
+                                                    <label class="flex flex-col sm:flex-row">Display Name<span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span> </label>
+                                                    <input type="text" id="user_display_name"
+                                                        class="input w-full border bg-gray-100 cursor-not-allowed mt-2"
+                                                        name="user_display_name" placeholder="User Display Name">
 
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label>Position</label>
-                                                <input type="text" id="user_role" class="input w-full border mt-2" placeholder="Position" name="user_role"  >
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label>First Name</label>
+                                                    <input type="text" id="user_first_name"
+                                                        class="input w-full border mt-2" placeholder="First Name"
+                                                        name="user_first_name">
 
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label>Email</label>
-                                                <input type="text" id="user_email" class="input w-full border mt-2" placeholder="Email" name="user_email"  >
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">Last Name<span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span> </label>
+                                                    <input type="text" class="input w-full border mt-2"
+                                                        placeholder="Last Name" id="user_last_name"
+                                                        name="user_last_name" value="">
 
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label>Telephone</label>
-                                                <input type="text" id="user_phone" class="input w-full border mt-2" placeholder="Contact Number" name="user_phone"  >
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label>Position</label>
+                                                    <input type="text" id="user_role" class="input w-full border mt-2"
+                                                        placeholder="Position" name="user_role">
 
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="mt-3">
-                                                <label>Address</label>
-                                                <textarea class="input w-full border mt-2" placeholder="Address" id="user_address" name="user_address"></textarea>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label>Email</label>
+                                                    <input type="text" id="user_email" class="input w-full border mt-2"
+                                                        placeholder="Email" name="user_email">
 
-
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label>Telephone</label>
+                                                    <input type="text" id="user_phone" class="input w-full border mt-2"
+                                                        placeholder="Contact Number" name="user_phone">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label>Address</label>
+                                                    <textarea class="input w-full border mt-2" placeholder="Address"
+                                                        id="user_address" name="user_address"></textarea>
 
 
-                                        <!-- <div class="mt-3">
+                                                </div>
+                                            </div>
+
+
+                                            <!-- <div class="mt-3">
                                              <label>ID Type</label>
                                              <select class="input w-full border mt-2">
                                                  <option>IC</option>
@@ -230,90 +280,91 @@
                                          !-->
 
 
-                                        <button class="button unclicked_form_button bg-theme-9" type="submit" value="Submit"> <span class="saving_btn"> Saving </span><span class="save_btn"> Save </span><span class="ready_btn"> Ready</span> <i data-loading-icon="oval" data-color="white" class="w-4 h-4 ml-auto fa fa-circle-o-notch fa-spin"></i> </button>
+                                            <button class="button unclicked_form_button bg-theme-9" type="submit"
+                                                value="Submit"> <span class="saving_btn"> Saving </span><span
+                                                    class="save_btn"> Save </span><span class="ready_btn"> Ready</span>
+                                                <i data-loading-icon="oval" data-color="white"
+                                                    class="w-4 h-4 ml-auto fa fa-circle-o-notch fa-spin"></i> </button>
 
 
-                                    </div>
-                                </form>
+                                        </div>
+                                    </form>
 
+                                </div>
                             </div>
                         </div>
+                        <!-- END: Display Information -->
+
                     </div>
-                    <!-- END: Display Information -->
-
                 </div>
             </div>
-        </div>
-        <!-- END: Content -->
-</main>
+            <!-- END: Content -->
+    </main>
 
 
 
 
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
+    <!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row gap-y align-items-center">
-            <div class="col-md-2">
-                <a class="nav-link" href="http://connect.tell.money">
-                    <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="nav justify-content-center justify-content-md-start">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="./specs">Specifications</a>
-                    <a class="nav-link" href="./get-started">Getting Started</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gap-y align-items-center">
+                <div class="col-md-2">
+                    <a class="nav-link" href="http://connect.tell.money">
+                        <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="nav justify-content-center justify-content-md-start">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="./specs">Specifications</a>
+                        <a class="nav-link" href="./get-started">Getting Started</a>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
                 </div>
             </div>
-            <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
-            </div>
-        </div>
-        <div class="row gap-y align-items-center">
-            <div class="col-md-12" style="
+            <div class="row gap-y align-items-center">
+                <div class="col-md-12" style="
     font-size: 12px;
     text-align: center;
     color: #989797;
 ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+            </div>
         </div>
+    </footer>
+    <div id="loader-wrapper">
+        <span class="loading_a">t<span class="period">.</span></span>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
     </div>
-</footer>
-<div id="loader-wrapper">
-    <span class="loading_a">t<span class="period">.</span></span>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-</div>
-<!-- /.footer -->
+    <!-- /.footer -->
 
 
-<!-- Site Configuration Data -->
-<script src="./assets/aspsp-assets/config.js"></script>
-<script src="./assets/data/site_data.js"></script>
-<!-- /Site Configuration Data -->
+    <!-- Site Configuration Data -->
+    <script src="./assets/data/site_data.js"></script>
+    <!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = '';var pi = 'UserProfile';  </script>
-<!-- /Page Configuration Data -->
+    <!-- Page Configuration Data -->
+    <script> var pmi = ''; var pi = 'UserProfile';  </script>
+    <!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/profile.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/js/page.min.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/general.js"></script>
+    <script src="./assets/js/underscore.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/profile.js?v=1"></script>
+    <script src="./assets/js/v_logic.js"></script>
+    <script src="./assets/js/customise.js"></script>
 
 
-
-<!-- /.Scripts -->
+    <!-- /.Scripts -->
 
 
 </body>
+
 </html>
-
-
-
