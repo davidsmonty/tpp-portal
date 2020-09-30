@@ -1,9 +1,9 @@
 var _config = {
   "subdomain": "alias",
   "client_name": "Alias Bank",
-  "client_name_lower": "Alias Bank",
-  "aisp": true,
-  "pisp": true,
+  "aisp": 1,
+  "pisp": 1,
+  "iface_uuid": "12345-asdfgh-23456-asdfg",
   "base_api_path": "https://system.tell.money/dev/",
   "swagger_file": "https://system.tell.money/dev/swagger/interface/aliasdev"
 };

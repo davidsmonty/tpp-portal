@@ -30,10 +30,16 @@
 	<link rel="apple-touch-icon" id="icon3" sizes="76x76">
 	<link rel="apple-touch-icon" id="icon4" sizes="120x120">
 	<link rel="apple-touch-icon" id="icon5" sizes="152x152">
+		
+	<!-- Defaults -->
+	<link rel="icon" href="./assets/aspsp-assets/default/favicon.png">
+	<link rel="shortcut icon" sizes="196x196" href="./assets/aspsp-assets/default/icon-196x196.png">
+	<link rel="apple-touch-icon" href="./assets/aspsp-assets/default/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/default/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/default/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
 
 </head>
-
-<body>
 
 	<!-- Navbar -->
 
@@ -270,9 +276,7 @@
                             <tr>
                                 <td>interface</td>
                                 <td> An id associated with our interface – please use the following:<br>
-                                    <script>
-                                        document.write(_config.iface_uuid);
-                                    </script>
+                                    <span id="iface_uuid"></span>
                                 </td>
                             </tr>
                             <tr>
@@ -489,25 +493,7 @@
 
 
                     <p>Payload:</p>
-                    <table class="table table-bordered table-striped table-detail">
-                        <tbody>
-                            <tr>
-                                <td>interface</td>
-                                <td>
-                                    <script>document.write(_config.iface_uuid);</script>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>scope</td>
-                                <td>{{aisp or pisp}}</td>
-                            </tr>
-                            <tr>
-                                <td>uuid</td>
-                                <td>{{generate by your application}}</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+                   <p>This should be as per the payload of the main request.</p>
 
 
                     <p>For instructions on how to sign and construct the full token, please refer to the JWT website or

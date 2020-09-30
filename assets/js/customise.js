@@ -32,3 +32,6 @@ if (_config.pisp === 0) {
 
 // customise client name
 $("#client").text(_config.client_name);
+
+// interface id
+$("#iface_uuid").text(_config.iface_uuid);
