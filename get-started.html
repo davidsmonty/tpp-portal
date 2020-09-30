@@ -251,7 +251,7 @@
 
                     <img src="./assets/img/AccessDiagram.png" class="img-fluid" alt="Responsive image">
                     </br>
-                    <p>In order to provide a TPP with a consumer’s data or to initiate a payment on their behalf, the
+                    <p>In order to provide a TPP with a consumer’s data <span class="pisp">or to initiate a payment </span>on their behalf, the
                         consumer is required to grant permission to the TPP for a period not exceeding 90 days.</p>
 
 
@@ -340,7 +340,7 @@
 
                     <h3 id="access_token">Obtain Access Token</h3>
                     <p>With the authorisation code returned, your application can now request an Access Token which can
-                        in turn be used to access the account resource information or initiate a payment.</p>
+                        in turn be used to access the account resource information<span class="pisp"> or initiate a payment</span>.</p>
                     <p> The authorisation code is valid for 60 seconds, so your application must exchange it for an
                         access token within that timeframe or the consent authorisation will need to be repeated.</p>
                     <p> This is done using the <strong>POST /access-token</strong> endpoint, providing the details as
@@ -351,7 +351,7 @@
                     <p> This request requires Basic Authorization to be provided in the form of a Base64 encoded
                         client_id and client_secret. You must also sign the request by including a valid JTW in the
                         “x-jws-signature” header (see Message Signing below for more details)</p>
-                    <p> The access token returned will permit access to the consumer data / payment initiation endpoint
+                    <p> The access token returned will permit access to the consumer data <span class="pisp">/ payment initiation</span> endpoint
                         for a maximum of 1 hour at which point the access token will need to be refreshed.</p>
 
 
