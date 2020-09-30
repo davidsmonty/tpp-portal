@@ -28,43 +28,6 @@
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/default/touch-icon-ipad-retina.png">
     <script src="./assets/aspsp-assets/config.js"></script>
 
-    <script>
-
-        function getHeaders() {
-            
-            var req = new XMLHttpRequest();
-            req.open('GET', document.location, false);
-            req.send(null);
-
-            // associate array to store all values
-           // var data = new Object();
-
-            // get all headers in one call and parse each item
-            var headers = req.getAllResponseHeaders().toLowerCase();
-            var aHeaders = headers.split('\n');
-            var i = 0;
-            for (i = 0; i < aHeaders.length; i++) {
-                var thisItem = aHeaders[i];
-                var key = thisItem.substring(0, thisItem.indexOf(':'));     console.log(key);
-                var value = thisItem.substring(thisItem.indexOf(':') + 1);  console.log(value);
-                //data[key] = value;
-            }
-
-            /* get referer
-            var referer = document.referrer;
-            data["Referer"] = referer;
-
-            //get useragent
-            var useragent = navigator.userAgent;
-            data["UserAgent"] = useragent;
-
-            console.log(display);*/
-        }
-
-        getHeaders();
-
-    </script>
-
 </head>
 
 <body>
@@ -623,13 +586,7 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/howitworks.js?v=1"></script>
     <script src="./assets/js/v_logic.js"></script>
-
-    <script>
-        if (_config.pisp === false) {
-            $(".pisp").hide();
-        }
-    </script>
-
+    <script src="./assets/js/customise.js"></script>
     <!-- /.Scripts -->
 
 </body>
