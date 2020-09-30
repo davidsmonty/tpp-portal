@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -25,184 +26,209 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/aspsp-assets/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="./assets/aspsp-assets/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/aspsp-assets/touch-icon-ipad-retina.png">
+    <script src="./assets/aspsp-assets/config.js"></script>
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-    <div class="container">
-        <div class="navbar-left">
-            <button class="navbar-toggler" type="button">&#9776;</button>
-            <a class="navbar-brand" href="/">
-                <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
-                <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
-            </a>
-        </div>
-        <section class="navbar-mobile">
-            <ul class="nav nav-navbar mr-auto">
-            </ul>
-            <div class="w-30">
-                <div class="flex" id="greeting-options" style="display: none">
-                    <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-                    <!-- BEGIN: Account Menu -->
-                    <div class="intro-x dropdown w-60 h-8 relative">
-                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                            <img id="profile-picture--header" alt="ProfilePic" src="">
-                        </div>
-                        <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                                <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium full-name"></div>
-                                    <div class="text-xs text-theme-41 role-name"></div>
-                                </div>
-                                <div class="p-2" id="profile_menu">
-                                </div>
-                                <div class="p-2 border-t border-theme-40">
-                                    <a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="/">
+                    <img class="logo-dark" src="./assets/aspsp-assets/logo-dark.png" alt="logo">
+                    <img class="logo-light" src="./assets/aspsp-assets/logo-light.png" alt="logo">
+                </a>
+            </div>
+            <section class="navbar-mobile">
+                <ul class="nav nav-navbar mr-auto">
+                </ul>
+                <div class="w-30">
+                    <div class="flex" id="greeting-options" style="display: none">
+                        <div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+                        <!-- BEGIN: Account Menu -->
+                        <div class="intro-x dropdown w-60 h-8 relative">
+                            <div
+                                class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                                <img id="profile-picture--header" alt="ProfilePic" src="">
+                            </div>
+                            <div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+                                <div class="dropdown-box__content box bg-theme-38 text-white">
+                                    <div class="p-4 border-b border-theme-40">
+                                        <div class="font-medium full-name"></div>
+                                        <div class="text-xs text-theme-41 role-name"></div>
+                                    </div>
+                                    <div class="p-2" id="profile_menu">
+                                    </div>
+                                    <div class="p-2 border-t border-theme-40">
+                                        <a
+                                            class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+                                            <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Account Menu -->
                     </div>
-                    <!-- END: Account Menu -->
+                    <div id="logInBox">
+                        <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+                        <a class="btn btn-sm btn-success" href="./login">Sign In</a>
+                    </div>
                 </div>
-                <div id="logInBox">
-                    <a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-                    <a class="btn btn-sm btn-success" href="./login">Sign In</a>
-                </div>
+            </section>
+        </div>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
+
+    <!-- header -->
+    <header class="header" style="background-color: #f1f6fa">
+        <div class="container-sm">
+            <h1>Terms of Service</h1>
+            <p class="lead">Last update: March 22, 2020</p>
+        </div>
+    </header><!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container-sm">
+
+                <h4>General Information</h4>
+                <p>We collect the e-mail addresses of those who communicate with us via e-mail, aggregate information on
+                    what pages consumers access or visit, and information volunteered by the consumer (such as survey
+                    information and/or site registrations). The information we collect is used to improve the content of
+                    our Web pages and the quality of our service, and is not shared with or sold to other organizations
+                    for commercial purposes, except to provide products or services you’ve requested, when we have your
+                    permission, or under the following circumstances:</p>
+
+                <ul>
+                    <li>It is necessary to share information in order to investigate, prevent, or take action regarding
+                        illegal activities, suspected fraud, situations involving potential threats to the physical
+                        safety of any person, violations of Terms of Service, or as otherwise required by law.</li>
+                    <li>We transfer information about you if Tell Money Limited is acquired by or merged with another
+                        company. In this event, Tell Money Limited will notify you before information about you is
+                        transferred and becomes subject to a different privacy policy.</li>
+                </ul>
+
+                <br>
+                <h4>Information Gathering and Usage</h4>
+                <ul>
+                    <li>When you register for Tell Money Limited we ask for information such as your name, email
+                        address, billing address, credit card information. Members who sign up for the free account are
+                        not required to enter a credit card.</li>
+                    <li>Tell Money Limited uses collected information for the following general purposes: products and
+                        services provision, billing, identification and authentication, services improvement, contact,
+                        and research.</li>
+                </ul>
+
+                <br>
+                <h4>Cookies</h4>
+                <ul>
+                    <li>A cookie is a small amount of data, which often includes an anonymous unique identifier, that is
+                        sent to your browser from a web site’s computers and stored on your computer’s hard drive.</li>
+                    <li>Cookies are required to use the Tell Money Limited service.</li>
+                    <li>We use cookies to record current session information, but do not use permanent cookies. You are
+                        required to re-login to your Tell Money Limited account after a certain period of time has
+                        elapsed to protect you against others accidentally accessing your account contents.</li>
+                </ul>
+
+                <br>
+                <h4>Data Storage</h4>
+                <p>Tell Money Limited uses third party vendors and hosting partners to provide the necessary hardware,
+                    software, networking, storage, and related technology required to run Tell Money Limited. Although
+                    Tell Money Limited owns the code, databases, and all rights to the Tell Money Limited application,
+                    you retain all rights to your data.</p>
+
+                <br>
+                <h4>Disclosure</h4>
+                <p>Tell Money Limited may disclose personally identifiable information under special circumstances, such
+                    as to comply with subpoenas or when your actions violate the Terms of Service.</p>
+
+
+                <br>
+                <h4>Changes</h4>
+                <p>Tell Money Limited may periodically update this policy. We will notify you about significant changes
+                    in the way we treat personal information by sending a notice to the primary email address specified
+                    in your Tell Money Limited primary account holder account or by placing a prominent notice on our
+                    site. Such notice will be given at least 3 days in advance of the date the new policy will be
+                    applied.</p>
+
+
+                <br>
+                <h4>Question</h4>
+                <p>Any questions about this Privacy Policy should be addressed to privacy@tell.money.</p>
+
             </div>
         </section>
-    </div>
-</nav>
-<!-- /.navbar -->
+    </main><!-- /.main-content -->
 
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
+    <!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
 
-<!-- header -->
-<header class="header" style="background-color: #f1f6fa">
-    <div class="container-sm">
-        <h1>Terms of Service</h1>
-        <p class="lead">Last update: March 22, 2020</p>
-    </div>
-</header><!-- /.header -->
-
-
-<!-- Main Content -->
-<main class="main-content">
-    <section class="section">
-        <div class="container-sm">
-
-            <h4>General Information</h4>
-            <p>We collect the e-mail addresses of those who communicate with us via e-mail, aggregate information on what pages consumers access or visit, and information volunteered by the consumer (such as survey information and/or site registrations). The information we collect is used to improve the content of our Web pages and the quality of our service, and is not shared with or sold to other organizations for commercial purposes, except to provide products or services you’ve requested, when we have your permission, or under the following circumstances:</p>
-
-            <ul>
-                <li>It is necessary to share information in order to investigate, prevent, or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person, violations of Terms of Service, or as otherwise required by law.</li>
-                <li>We transfer information about you if Tell Money Limited is acquired by or merged with another company. In this event, Tell Money Limited will notify you before information about you is transferred and becomes subject to a different privacy policy.</li>
-            </ul>
-
-            <br>
-            <h4>Information Gathering and Usage</h4>
-            <ul>
-                <li>When you register for Tell Money Limited we ask for information such as your name, email address, billing address, credit card information. Members who sign up for the free account are not required to enter a credit card.</li>
-                <li>Tell Money Limited uses collected information for the following general purposes: products and services provision, billing, identification and authentication, services improvement, contact, and research.</li>
-            </ul>
-
-            <br>
-            <h4>Cookies</h4>
-            <ul>
-                <li>A cookie is a small amount of data, which often includes an anonymous unique identifier, that is sent to your browser from a web site’s computers and stored on your computer’s hard drive.</li>
-                <li>Cookies are required to use the Tell Money Limited service.</li>
-                <li>We use cookies to record current session information, but do not use permanent cookies. You are required to re-login to your Tell Money Limited account after a certain period of time has elapsed to protect you against others accidentally accessing your account contents.</li>
-            </ul>
-
-            <br>
-            <h4>Data Storage</h4>
-            <p>Tell Money Limited uses third party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run Tell Money Limited. Although Tell Money Limited owns the code, databases, and all rights to the Tell Money Limited application, you retain all rights to your data.</p>
-
-            <br>
-            <h4>Disclosure</h4>
-            <p>Tell Money Limited may disclose personally identifiable information under special circumstances, such as to comply with subpoenas or when your actions violate the Terms of Service.</p>
-
-
-            <br>
-            <h4>Changes</h4>
-            <p>Tell Money Limited may periodically update this policy. We will notify you about significant changes in the way we treat personal information by sending a notice to the primary email address specified in your Tell Money Limited primary account holder account or by placing a prominent notice on our site. Such notice will be given at least 3 days in advance of the date the new policy will be applied.</p>
-
-
-            <br>
-            <h4>Question</h4>
-            <p>Any questions about this Privacy Policy should be addressed to privacy@tell.money.</p>
-
-        </div>
-    </section>
-</main><!-- /.main-content -->
-
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row gap-y align-items-center">
-            <div class="col-md-2">
-                <a class="nav-link" href="http://connect.tell.money">
-                    <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-                </a>
-            </div>
-            <div class="col-md-8">
-                <div class="nav justify-content-center justify-content-md-start">
-                    <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link" href="./specs">Specifications</a>
-                    <a class="nav-link" href="./get-started">Getting Started</a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row gap-y align-items-center">
+                <div class="col-md-2">
+                    <a class="nav-link" href="http://connect.tell.money">
+                        <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="nav justify-content-center justify-content-md-start">
+                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="./specs">Specifications</a>
+                        <a class="nav-link" href="./get-started">Getting Started</a>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
                 </div>
             </div>
-            <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
-            </div>
-        </div>
-        <div class="row gap-y align-items-center">
-            <div class="col-md-12" style="
+            <div class="row gap-y align-items-center">
+                <div class="col-md-12" style="
     font-size: 12px;
     text-align: center;
     color: #989797;
 ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+            </div>
         </div>
+    </footer>
+    <div id="loader-wrapper">
+        <span class="loading_a">t<span class="period">.</span></span>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
     </div>
-</footer>
-<div id="loader-wrapper">
-    <span class="loading_a">t<span class="period">.</span></span>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-</div>
-<!-- /.footer -->
+    <!-- /.footer -->
 
 
-<!-- Site Configuration Data -->
-<script src="./assets/aspsp-assets/config.js"></script>
-<script src="./assets/data/site_data.js"></script>
-<!-- /Site Configuration Data -->
+    <!-- Site Configuration Data -->
+    <script src="./assets/aspsp-assets/config.js"></script>
+    <script src="./assets/data/site_data.js"></script>
+    <!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = 'Organisation';var pi = 'OrganisationProfile';  </script>
-<!-- /Page Configuration Data -->
+    <!-- Page Configuration Data -->
+    <script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
+    <!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/org.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./assets/js/page.min.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/general.js"></script>
+    <script src="./assets/js/underscore.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/customise.js"></script>
 
 
 
-<!-- /.Scripts -->
+    <!-- /.Scripts -->
 
 
 </body>
+
 </html>
-
-
-
-
