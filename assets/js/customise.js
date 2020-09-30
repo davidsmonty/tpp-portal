@@ -3,7 +3,7 @@ newPageTitle = _config.client_name;
 document.title = newPageTitle; 
 
 // customise logos
-var logodark = "./assets/aspsp-assets/" + _config.subdomain + "/logo-dark.png"; console.log(logodark)
+var logodark = "./assets/aspsp-assets/" + _config.subdomain + "/logo-dark.png";
 var logolight = "./assets/aspsp-assets/" + _config.subdomain + "/logo-light.png";
 var icon0 = "./assets/aspsp-assets/" + _config.subdomain + "/favicon.png";
 var icon1 = "./assets/aspsp-assets/" + _config.subdomain + "/icon-196x196.png";
