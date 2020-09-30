@@ -5,5 +5,5 @@ var _config = {
   "aisp": true,
   "pisp": true,
   "base_api_path": "https://system.tell.money/dev/",
-  "swagger_file": "https://system.tell.money/dev/swagger/interface/example-bank-open-banking-api"
+  "swagger_file": "https://system.tell.money/dev/swagger/interface/aliasdev"
 };

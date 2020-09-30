@@ -4,7 +4,7 @@
 <head>
 
 	<!-- Client Config -->
-	<script src="./assets/aspsp-assets/config.js"></script>	
+	<script src="./assets/aspsp-assets/config.js"></script>
 
 	<meta charset="utf-8">
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -22,11 +22,12 @@
 	<link href="./assets/css/page.min.css" rel="stylesheet">
 	<link href="./assets/css/style.css" rel="stylesheet">
 	<link href="./assets/css/themify-icons.css" rel="stylesheet">
+	<link href="./assets/css/swagger-ui.css" rel="stylesheet">
 
 	<!-- Favicons -->
 	<link rel="icon" id="icon0">
 	<link rel="shortcut icon" sizes="196x196" id="icon1">
-	<link rel="apple-touch-icon" id="icon2"> 
+	<link rel="apple-touch-icon" id="icon2">
 	<link rel="apple-touch-icon" id="icon3" sizes="76x76">
 	<link rel="apple-touch-icon" id="icon4" sizes="120x120">
 	<link rel="apple-touch-icon" id="icon5" sizes="152x152">
@@ -41,15 +42,15 @@
 		<div class="container">
 			<div class="navbar-left">
 				<button class="navbar-toggler" type="button">&#9776;</button>
-				<a class="navbar-brand" href="/">			
+				<a class="navbar-brand" href="/">
 					<img id="logo-dark" class="logo-dark" alt="logo">
 					<img id="logo-light" class="logo-light" alt="logo">
-			</a>
-		</div>
-		<section class="navbar-mobile">
-			<ul class="nav nav-navbar mr-auto">
-			</ul>
-			<!--<div>
+				</a>
+			</div>
+			<section class="navbar-mobile">
+				<ul class="nav nav-navbar mr-auto">
+				</ul>
+				<!--<div>
 
 				&lt;!&ndash;<div class="row">
 					<div style="
@@ -71,131 +72,133 @@
 
 
 			</div>-->
-			<div class="w-30">
-				<div class="flex" id="greeting-options" style="display: none">
-					<div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-					<!-- BEGIN: Account Menu -->
-					<div class="intro-x dropdown w-60 h-8 relative">
-						<div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-							<img id="profile-picture--header" alt="ProfilePic" src="">
-						</div>
-						<div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-							<div class="dropdown-box__content box bg-theme-38 text-white">
-								<div class="p-4 border-b border-theme-40">
-									<div class="font-medium full-name"></div>
-									<div class="text-xs text-theme-41 role-name"></div>
-								</div>
-								<div class="p-2" id="profile_menu">
-								</div>
-								<div class="p-2 border-t border-theme-40">
-									<a class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+				<div class="w-30">
+					<div class="flex" id="greeting-options" style="display: none">
+						<div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+						<!-- BEGIN: Account Menu -->
+						<div class="intro-x dropdown w-60 h-8 relative">
+							<div
+								class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+								<img id="profile-picture--header" alt="ProfilePic" src="">
+							</div>
+							<div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+								<div class="dropdown-box__content box bg-theme-38 text-white">
+									<div class="p-4 border-b border-theme-40">
+										<div class="font-medium full-name"></div>
+										<div class="text-xs text-theme-41 role-name"></div>
+									</div>
+									<div class="p-2" id="profile_menu">
+									</div>
+									<div class="p-2 border-t border-theme-40">
+										<a
+											class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+											<i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- END: Account Menu -->
 					</div>
-					<!-- END: Account Menu -->
+					<div id="logInBox">
+						<a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+						<a class="btn btn-sm btn-success" href="./login">Sign In</a>
+					</div>
 				</div>
-				<div id="logInBox">
-					<a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-					<a class="btn btn-sm btn-success" href="./login">Sign In</a>
+			</section>
+		</div>
+	</nav>
+	<!-- /.navbar -->
+
+
+	<!-- Header -->
+	<!-- /.header -->
+	<main class="main-content body-main-spec">
+
+
+		<div class="hide-spec" id="swagger-ui"></div>
+		<redoc class="hide-spec" id="redoc_spec" spec-url=""></redoc>
+	</main>
+	<!-- Main Content -->
+
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row gap-y align-items-center">
+				<div class="col-md-2">
+					<a class="nav-link" href="http://connect.tell.money">
+						<img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+					</a>
+				</div>
+				<div class="col-md-8">
+					<div class="nav justify-content-center justify-content-md-start">
+						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link" href="./specs">Specifications</a>
+						<a class="nav-link" href="./get-started">Getting Started</a>
+					</div>
+				</div>
+				<div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
 				</div>
 			</div>
-		</section>
-	</div>
-</nav>
-<!-- /.navbar -->
-
-
-    <!-- Header -->
-<!-- /.header -->
-<main class="main-content body-main-spec">
-
-
-	<div class="hide-spec" id="swagger-ui"></div>
-<redoc class="hide-spec" id="redoc_spec" spec-url=""></redoc>
-</main>
-    <!-- Main Content -->
-
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row gap-y align-items-center">
-          <div class="col-md-2">
-            <a class="nav-link" href="http://connect.tell.money">
-              <img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-            </a>
-          </div>
-          <div class="col-md-8">
-            <div class="nav justify-content-center justify-content-md-start">
-              <a class="nav-link" href="/">Home</a>
-              <a class="nav-link" href="./specs">Specifications</a>
-              <a class="nav-link" href="./get-started">Getting Started</a>
-            </div>
-          </div>
-          <div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
-          </div>
-        </div>
-        <div class="row gap-y align-items-center">
-          <div class="col-md-12" style="
+			<div class="row gap-y align-items-center">
+				<div class="col-md-12" style="
       font-size: 12px;
       text-align: center;
       color: #989797;
     ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
-        </div>
-      </div>
-    </footer>
-  <!-- /.footer -->
+			</div>
+		</div>
+	</footer>
+	<!-- /.footer -->
 
-  <!-- Site Configuration Data -->
-  <script src="./assets/data/site_data.js"></script>
-  <script src="./assets/aspsp-assets/config.js"></script>
-  <!-- /Site Configuration Data -->
+	<!-- Site Configuration Data -->
+    <script src="./assets/data/site_data.js"></script>
+	<!-- /Site Configuration Data -->
 
-  <!-- Page Configuration Data -->
-  <script> var pmi = 'Organisation';var pi = 'OrganisationProfile';  </script>
-  <!-- /Page Configuration Data -->
+	<!-- Page Configuration Data -->
+	<script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
+	<!-- /Page Configuration Data -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="./assets/js/page.min.js"></script>
-  <script src="./assets/js/auth.js"></script>
-  <script src="./assets/js/general.js"></script>
-  <script src="./assets/js/underscore.js"></script>
-  <script src="./assets/js/jquery.validate.min.js"></script>
-  <script src="./assets/js/customise.js"></script>
-  <!-- /.Scripts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="./assets/js/page.min.js"></script>
+	<script src="./assets/js/auth.js"></script>
+	<script src="./assets/js/general.js"></script>
+	<script src="./assets/js/underscore.js"></script>
+	<script src="./assets/js/jquery.validate.min.js"></script>
+	<script src="./assets/js/customise.js"></script>
+	<!-- /.Scripts -->
 
-  <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
-  <script src="./assets/js/swagger-ui-bundle.js"> </script>
-  <script src="./assets/js/swagger-ui-standalone-preset.js"> </script>
-  <script>
-      window.onload = function() {
-          // Begin Swagger UI call region
-          const ui = SwaggerUIBundle({
-              url: _config.swagger_file,
-              dom_id: '#swagger-ui',
-              deepLinking: true,
-              presets: [
-                  SwaggerUIBundle.presets.apis,
-                  SwaggerUIStandalonePreset
-              ],
-              plugins: [
-                  SwaggerUIBundle.plugins.DownloadUrl
-              ],
-              layout: "StandaloneLayout"
-          })
-          // End Swagger UI call region
+	<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+	<script src="./assets/js/swagger-ui-bundle.js"> </script>
+	<script src="./assets/js/swagger-ui-standalone-preset.js"> </script>
+	<script>
+		window.onload = function () {
+			// Begin Swagger UI call region
+			const ui = SwaggerUIBundle({
+				url: _config.swagger_file,
+				dom_id: '#swagger-ui',
+				deepLinking: true,
+				presets: [
+					SwaggerUIBundle.presets.apis,
+					SwaggerUIStandalonePreset
+				],
+				plugins: [
+					SwaggerUIBundle.plugins.DownloadUrl
+				],
+				layout: "StandaloneLayout"
+			})
+			// End Swagger UI call region
 
-          window.ui = ui
-      }
-
-
-  </script>
+			window.ui = ui
+		}
 
 
-  <!-- /.Scripts -->
+	</script>
+
+
+	<!-- /.Scripts -->
 
 
 </body>
-</html>
 
+</html>
