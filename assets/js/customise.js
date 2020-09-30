@@ -1,8 +1,8 @@
 console.log('in customise')
-console.log(_config)
 
-if (_config.pisp === 0) {
+
+if (_config.pisp === 0) { console.log('trying to hide')
     $(".pisp").hide();
-}
+} else {console.log('no hide');}
 
 console.log('end customise')
