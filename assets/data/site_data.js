@@ -23,6 +23,13 @@ var nav = {
             "nav_icon": true,
             "nav_children": [
                 {
+                    "nav_name": "Statistics",
+                    "nav_href": "/stats",
+                    "nav_secure": false,
+                    "nav_icon": true,
+                    "nav_children": []
+                },
+                {
                     "nav_name": "FAQs",
                     "nav_href": "/faq",
                     "nav_secure": false,
@@ -55,14 +62,14 @@ var nav = {
         },
         {
             "nav_name": "Admin",
-            "nav_href": "/interfaces",
+            "nav_href": "/applications",
             "nav_secure": true,
             "nav_icon": true,
             "nav_children": [
 
                 {
-                    "nav_name": "Interfaces",
-                    "nav_href": "/interfaces",
+                    "nav_name": "Your Apps",
+                    "nav_href": "/applications",
                     "nav_secure": true,
                     "nav_icon": true,
                     "nav_children": [],
@@ -82,8 +89,8 @@ var nav = {
     ],
     "nav_admin": [
         {
-            "nav_name": "Interfaces",
-            "nav_href": "/interfaces",
+            "nav_name": "Your Apps",
+            "nav_href": "/applications",
             "nav_secure": true,
             "nav_icon": "ti-view-grid",
             "nav_children": [],
@@ -100,95 +107,23 @@ var nav = {
     ],
     "nav_profile": [
     {
-        "nav_name": "Personal Information",
+        "nav_name": "Profile",
         "nav_href": "/profile",
         "nav_secure": true,
-        "nav_icon": "ti-info-alt",
+        "nav_icon": "ti-view-grid",
         "nav_children": [],
         "app_created_date": ""
     },
     {
-        "nav_name": "Change Password",
+        "nav_name": "Profile Security",
         "nav_href": "/profile-security",
         "nav_secure": true,
-        "nav_icon": "ti-lock",
+        "nav_icon": "ti-home",
         "nav_children": [],
         "app_created_date": ""
     }
-],
-    "nav_interfaces": [
-        {
-            "nav_name": "General Information",
-            "nav_href": "./general",
-            "nav_secure": true,
-            "nav_sub": "InterfaceView",
-            "nav_icon": "ti-info-alt",
-            "nav_children": [],
-            "app_created_date": ""
-        },
-        {
-            "nav_name": "Endpoint Management",
-            "nav_href": "./endpoints",
-            "nav_sub": "InterfaceEndpoints",
-            "nav_secure": true,
-            "nav_icon": "ti-link",
-            "nav_children": [],
-            "app_created_date": ""
-        },{
-            "nav_name": "Portal Customisation",
-            "nav_href": "./portal",
-            "nav_secure": true,
-            "nav_sub": "InterfacePortal",
-            "nav_icon": "ti-desktop",
-            "nav_children": [],
-            "app_created_date": ""
-        },
-        {
-            "nav_name": "Sandbox Settings",
-            "nav_href": "./sandbox",
-            "nav_secure": true,
-            "nav_sub": "InterfaceSandboxConfig",
-            "nav_icon": "ti-game",
-            "nav_children": [],
-            "app_created_date": ""
-        },
-        {
-            "nav_name": "Production Settings",
-            "nav_href": "./production",
-            "nav_secure": true,
-            "nav_sub": "InterfaceProductionConfig",
-            "nav_icon": "ti-bolt",
-            "nav_children": [],
-            "app_created_date": ""
-        },
-        {
-            "nav_name": "Security",
-            "nav_href": "./security",
-            "nav_sub": "InterfaceSecurity",
-            "nav_secure": true,
-            "nav_icon": "ti-lock",
-            "nav_children": [],
-            "app_created_date": ""
-        }],
-    "nav_organisation": [
-        {
-            "nav_name": "General Information",
-            "nav_href": "./organisation",
-            "nav_secure": true,
-            "nav_sub": "OrganisationProfile",
-            "nav_icon": "ti-info-alt",
-            "nav_children": [],
-            "app_created_date": ""
-        },
-        {
-            "nav_name": "Organisation Certificates",
-            "nav_href": "./organisation-certificates",
-            "nav_secure": true,
-            "nav_sub": "OrganisationCerts",
-            "nav_icon": "ti-receipt",
-            "nav_children": [],
-            "app_created_date": ""
-        }]
+
+]
 };
 
 var nca_lu = [{
