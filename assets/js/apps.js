@@ -8,9 +8,6 @@ let cert_key = '';
 var apps = {
     initialise: function () { 
         
-        console.log(11)
-        console.log(pi)
-
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
@@ -117,8 +114,6 @@ var apps = {
 
         }
 
-        console.log(120)
-        console.log(pi)
         switch (pi) {
 
 
@@ -138,8 +133,7 @@ var apps = {
         };
     },
     updateAlertManager: function (action, status) {
-        console.log(141)
-        console.log(pi)
+
         switch (action) {
             case 'close':
                 $('.updateAlertSuccess').hide("fast", function () {
@@ -239,8 +233,6 @@ var apps = {
     },
     populateCertificates: function (cert_data) {
 
-        console.log(cert_data);
-
         var nca_list = $("#app_cert_list");
 
         $.each(cert_data, function () {
@@ -329,7 +321,7 @@ var apps = {
             'redirect_url': $('#app_redirect').val(),
             'app_cert': $('#app_cert_list').val(),
             'app_environment': app_env
-        }; console.log(params)
+        };
 
 
         var ajaxCallData = {
@@ -341,7 +333,7 @@ var apps = {
                 "x-jwt-token": tell_cookie.tell_token
             }
 
-        }; console.log(ajaxCallData)
+        };
 
         tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
 
@@ -492,9 +484,6 @@ var apps = {
         // Add Class to indicate loading
         $('.unclicked_form_button').addClass('saving');
         $('.unclicked_form_button').prop('disabled', true);
-
-        console.log(491)
-        console.log(pi)
 
         switch (pi) { 
             case 'AppsAdd':
