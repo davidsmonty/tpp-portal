@@ -117,7 +117,8 @@ var apps = {
 
         }
 
-
+        console.log(120)
+        console.log(pi)
         switch (pi) {
 
 
@@ -137,7 +138,8 @@ var apps = {
         };
     },
     updateAlertManager: function (action, status) {
-
+        console.log(141)
+        console.log(pi)
         switch (action) {
             case 'close':
                 $('.updateAlertSuccess').hide("fast", function () {
