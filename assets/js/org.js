@@ -1,5 +1,3 @@
-console.log(tell_user_token_data);
-
 var org = {
     initialise: function()  {
 

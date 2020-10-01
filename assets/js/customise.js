@@ -35,5 +35,3 @@ $("#client").text(_config.client_name);
 
 // interface id
 $("#iface_uuid").text(_config.iface_uuid);
-
-console.log(_config)
