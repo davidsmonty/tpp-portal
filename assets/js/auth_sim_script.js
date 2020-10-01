@@ -8,11 +8,12 @@ var auth_sim = {
 
         var urlParams = new URLSearchParams(location.search);
         var consentid = urlParams.get('consent-id');
-        var rsp = 'https://tell.money/404.html';
+        var rsp = 'https://'+ _config.subdomain +'.tell.money/404';
+        var url = 'https://system.tell.money/'+_config.version+'/auth/stub?consent-id=' + consentid;
 
         rsp = $.ajax({
             type: "GET",
-            url: 'https://system.tell.money/v1/auth/stub?consent-id=' + consentid,
+            url: url,
             async: false,
             headers: {
                 "Content-Type": "application/json"
@@ -20,20 +21,6 @@ var auth_sim = {
         }).done(function (result) {
             return result;
         });
-
-        if (rsp.status !== 200) {
-            
-            rsp = $.ajax({
-                type: "GET",
-                url: 'https://system.tell.money/dev/auth/stub?consent-id=' + consentid,
-                async: false,
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }).done(function (result) {
-                return result;
-            });
-        }
 
         $("a").attr("href", rsp.responseJSON.tpp_url);
 

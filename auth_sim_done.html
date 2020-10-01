@@ -41,70 +41,81 @@
 
 </head>
 
-<!-- Navbar -->
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-	<div class="container">
-		<div class="navbar-left">
-			<button class="navbar-toggler" type="button">&#9776;</button>
-			<a class="navbar-brand" href="/">
-				<img id="logo-dark" class="logo-dark" alt="logo">
-				<img id="logo-light" class="logo-light" alt="logo">
-			</a>
+	<!-- Navbar -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+		<div class="container">
+			<div class="navbar-left">
+				<button class="navbar-toggler" type="button">&#9776;</button>
+				<a class="navbar-brand" href="/">
+					<img id="logo-dark" class="logo-dark" alt="logo">
+					<img id="logo-light" class="logo-light" alt="logo">
+				</a>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
 
 
-<div class="consent_success" style="position: fixed;
+	<!-- Main Content -->
+	<main class="main-content">
+		<section class="section_a section py-9">
+			<div class="container">
+
+				<div class="consent_success" style="position: fixed;
     top: 24%;
     left: 0;
     right: 0;
     text-align: center;">
-	<h3 class="text-center">Simulator Auth Done!</h3>
-	<p class="text-center">We have authorised the user consent request via automated sandbox simulator. Click the button
-		below to return to the TPP.</p>
-	<div class="text-center">
-		<svg class="checkmark" style="margin:3% auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-			<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-			<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+					<h3 class="text-center">Simulator Auth Done!</h3>
+					<p class="text-center">We have authorised the user consent request via automated sandbox simulator.
+						Click the
+						button
+						below to return to the TPP.</p>
+					<div class="text-center">
+						<svg class="checkmark" style="margin:3% auto;" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 52 52">
+							<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+							<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
 
-	</div>
-	<div id="returnToTPP">
-		<a class="btn btn-sm btn-success" href="./login" id="a">Return to TPP</a>
-	</div>
-</div>
-<!-- /.footer -->
+					</div>
+					<div id="returnToTPP">
+						<a class="btn btn-sm btn-success" href="./login" id="a">Return to TPP</a>
+					</div>
+				</div>
 
-<!-- Loader -->
-<div id="loader-wrapper">
-	<span class="loading_a">t<span class="period">.</span></span>
-	<div class="loader-section section-left"></div>
-	<div class="loader-section section-right"></div>
-</div>
+	</main>
+	<!-- /.main-content -->
+
+
+
+	<!-- Loader -->
+	<div id="loader-wrapper">
+		<span class="loading_a">t<span class="period">.</span></span>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
 
 
 	<!-- Site Configuration Data -->
 	<script src="./assets/data/site_data.js"></script>
 	<!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
-<!-- /Page Configuration Data -->
+	<!-- Page Configuration Data -->
+	<script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
+	<!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/org.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
-<script src="./assets/js/jquery-qrcode.js"></script>
-<script src="./assets/js/auth_sim_script.js"></script>
-<script src="./assets/js/customise.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="./assets/js/page.min.js"></script>
+	<script src="./assets/js/auth.js"></script>
+	<script src="./assets/js/general.js"></script>
+	<script src="./assets/js/underscore.js"></script>
+	<script src="./assets/js/jquery.validate.min.js"></script>
+	<script src="./assets/js/customise.js"></script>
+	<script src="./assets/js/auth_sim_script.js"></script>
 
-<!-- /.Scripts -->
+	<!-- /.Scripts -->
 
 
 </body>
