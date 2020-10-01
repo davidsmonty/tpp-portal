@@ -1,10 +1,9 @@
 var _config = {
-    "subdomain": "osper",
-    "client_name": "Osper",
-    "client_name_lower": "osper",
-    "aisp": true,
-    "pisp": true,
-    "base_api_path": "https://system.tell.money/dev/",
-    "swagger_file": "https://system.tell.money/dev/swagger/interface/example-bank-open-banking-api"
-  };
-
+  "subdomain": "aliasdev",
+  "client_name": "Alias Bank",
+  "aisp": 1,
+  "pisp": 1,
+  "iface_uuid": "12345-asdfgh-23456-asdfg",
+  "base_api_path": "https://system.tell.money/dev/",
+  "swagger_file": "https://system.tell.money/dev/swagger/interface/aliasdev"
+};
