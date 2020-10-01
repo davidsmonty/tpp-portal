@@ -7,7 +7,7 @@ let cert_key = '';
 
 var apps = {
     initialise: function () {
-        console.log('initialising2')
+        console.log('initialising3')
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
