@@ -359,7 +359,7 @@ var apps = {
                 "x-jwt-token": tell_cookie.tell_token
             }
 
-        };
+        }; console.log(ajaxCallData)
 
         tell_ajax_handler.caller(this.populateApps, ajaxCallData);
     },
