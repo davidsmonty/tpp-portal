@@ -3,14 +3,14 @@ newPageTitle = _config.client_name;
 document.title = newPageTitle; 
 
 // customise logos
-var logodark = "./assets/aspsp-assets/" + _config.subdomain + "/logo-dark.png";
-var logolight = "./assets/aspsp-assets/" + _config.subdomain + "/logo-light.png";
-var icon0 = "./assets/aspsp-assets/" + _config.subdomain + "/favicon.png";
-var icon1 = "./assets/aspsp-assets/" + _config.subdomain + "/icon-196x196.png";
-var icon2 = "./assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone.png";
-var icon3 = "./assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad.png";
-var icon4 = "./assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone-retina.png";
-var icon5 = "./assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad-retina.png";
+var logodark = "/assets/aspsp-assets/" + _config.subdomain + "/logo-dark.png";
+var logolight = "/assets/aspsp-assets/" + _config.subdomain + "/logo-light.png";
+var icon0 = "/assets/aspsp-assets/" + _config.subdomain + "/favicon.png";
+var icon1 = "/assets/aspsp-assets/" + _config.subdomain + "/icon-196x196.png";
+var icon2 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone.png";
+var icon3 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad.png";
+var icon4 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone-retina.png";
+var icon5 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad-retina.png";
 function loadGraphics(){
     document.getElementById("logo-dark").src = logodark;
     document.getElementById("logo-light").src = logolight;
