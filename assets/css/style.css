@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .body-main-spec {
     height: 100%;
-    /* background-image: url(../assets/img/tell_bg-opt.jpg); */
+    /* background-image: url(./assets/img/tell_bg-opt.jpg); */
     background-size: cover;
     background-color: #ffffff;
 }
