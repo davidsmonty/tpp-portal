@@ -1,5 +1,5 @@
 var _config = {
-  "subdomain": "alias",
+  "subdomain": "aliasdev",
   "client_name": "Alias Bank",
   "aisp": 1,
   "pisp": 1,

@@ -1,0 +1,1 @@
+var _config = {"subdomain":"alias","client_name":"Alias Bank","aisp":true,"pisp":true,"iface_uuid":"4b91aade-73a7-48ca-8188-41a9ed57ddbc","swagger_file":"https://system.tell.money/v1/swagger/interface/alias","base_api_path":"https://system.tell.money/v1/"};
