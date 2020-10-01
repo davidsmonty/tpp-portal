@@ -6,7 +6,8 @@ let app_env = '';
 let cert_key = '';
 
 var apps = {
-    initialise: function () { console.log('initialising')
+    initialise: function () {
+        console.log('initialising2')
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
@@ -38,7 +39,6 @@ var apps = {
                 break;
             default:
                 console.log('Update Other')
-
         }
 
 
@@ -358,11 +358,11 @@ var apps = {
                 "x-jwt-token": tell_cookie.tell_token
             }
 
-        }; 
+        };
 
         tell_ajax_handler.caller(this.populateApps, ajaxCallData);
     },
-    getApp: function () {
+    getApp: function () { console.log('getting app')
 
         var path = window.location.pathname // /account/search
         var app_id = path.split("/").pop();
@@ -380,9 +380,9 @@ var apps = {
             headers: {
                 "Content-Type": "application/json",
                 "x-jwt-token": tell_cookie.tell_token
-            } 
+            }
 
-        }; 
+        };
         console.log(ajaxCallData)
 
         tell_ajax_handler.caller(this.populateAppData, ajaxCallData);
@@ -573,7 +573,7 @@ var apps = {
         if (myapp.environment === 'production') { $('.productionNoApp').hide(); } else { $('.sandboxNoApp').hide(); }
 
         var env_vector = (myapp.environment === 'production') ? 'file__icon--production' : 'file__icon--sandbox';
-        var env_section = (myapp.environment === 'production') ? 'productionAppContainer' : 'sandboxAppContainer'; 
+        var env_section = (myapp.environment === 'production') ? 'productionAppContainer' : 'sandboxAppContainer';
         var app_icon = (myapp.app_icon !== '') ? '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="' + myapp.app_icon + '">' : '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="' + myapp.app_icon + '">';
 
 
