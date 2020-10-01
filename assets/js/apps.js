@@ -7,14 +7,13 @@ let cert_key = '';
 
 var apps = {
     initialise: function () {
-        console.log('initialising3')
+        
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
         switch (pi) {
             case 'AppsMain':
                 // code block
-
                 this.getApps();
                 break;
             case 'AppView':
@@ -37,8 +36,7 @@ var apps = {
                 // code block
                 this.getOrganisationUsers();
                 break;
-            default:
-                console.log('Update Other')
+            default:                
         }
 
 
@@ -326,7 +324,7 @@ var apps = {
             'redirect_url': $('#app_redirect').val(),
             'app_cert': $('#app_cert_list').val(),
             'app_environment': app_env
-        };
+        }; console.log(params)
 
 
         var ajaxCallData = {
@@ -338,7 +336,7 @@ var apps = {
                 "x-jwt-token": tell_cookie.tell_token
             }
 
-        };
+        }; console.log(ajaxCallData)
 
         tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
 
