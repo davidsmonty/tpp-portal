@@ -115,7 +115,7 @@ var nav = {
         "app_created_date": ""
     },
     {
-        "nav_name": "Profile Security",
+        "nav_name": "Change Password",
         "nav_href": "/profile-security",
         "nav_secure": true,
         "nav_icon": "ti-home",
