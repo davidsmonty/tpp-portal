@@ -6,8 +6,11 @@ let app_env = '';
 let cert_key = '';
 
 var apps = {
-    initialise: function () {
+    initialise: function () { 
         
+        console.log(11)
+        console.log(pi)
+
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
@@ -36,7 +39,7 @@ var apps = {
                 // code block
                 this.getOrganisationUsers();
                 break;
-            default:                
+            default:
         }
 
 
@@ -360,7 +363,7 @@ var apps = {
 
         tell_ajax_handler.caller(this.populateApps, ajaxCallData);
     },
-    getApp: function () { console.log('getting app')
+    getApp: function () {
 
         var path = window.location.pathname // /account/search
         var app_id = path.split("/").pop();
@@ -381,7 +384,6 @@ var apps = {
             }
 
         };
-        console.log(ajaxCallData)
 
         tell_ajax_handler.caller(this.populateAppData, ajaxCallData);
     },
@@ -489,7 +491,10 @@ var apps = {
         $('.unclicked_form_button').addClass('saving');
         $('.unclicked_form_button').prop('disabled', true);
 
-        switch (pi) {
+        console.log(491)
+        console.log(pi)
+
+        switch (pi) { 
             case 'AppsAdd':
                 // code block
                 console.log('Create Application');
