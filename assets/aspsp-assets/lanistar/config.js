@@ -1,1 +1,0 @@
-var _config = {"subdomain":"lanistar","client_name":"Lanistar","aisp":true,"pisp":true,"iface_uuid":"49c5218e-ca78-41f0-8670-8faf6f037c05","swagger_file":"https://system.tell.money/v1/swagger/interface/lanistar","base_api_path":"https://system.tell.money/v1/"};

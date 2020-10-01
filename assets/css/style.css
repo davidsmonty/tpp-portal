@@ -77,13 +77,13 @@ body {
     font-size: .9375rem;
     font-weight: 300;
     line-height: 1.9;
-    color: #c1bfbf;
+    color: #000;
     text-align: left;
     background-color: #fff;
 }
 
 .text-default {
-    color: #adabab !important;
+    color: #000000 !important;
 }
 
 .navbar-dark .nav-navbar>.nav-item>.nav-link, .navbar-dark .nav-navbar>.nav-link, .navbar-stick-dark.stick .nav-navbar>.nav-item>.nav-link, .navbar-stick-dark.stick .nav-navbar>.nav-link {
@@ -139,7 +139,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
-  color: #907c7c;
+  color: #000000;
     letter-spacing: 0.5px;
 }
 

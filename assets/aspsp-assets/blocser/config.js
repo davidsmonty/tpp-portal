@@ -1,1 +1,0 @@
-var _config = {"subdomain":"blocser","client_name":"Blocser","aisp":true,"pisp":true,"iface_uuid":"39bd323f-4e02-4b23-9644-ef50c28bfec7","swagger_file":"https://system.tell.money/v1/swagger/interface/blocser","base_api_path":"https://system.tell.money/v1/"};

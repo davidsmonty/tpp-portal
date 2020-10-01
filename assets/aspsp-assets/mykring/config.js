@@ -1,1 +1,0 @@
-var _config = {"subdomain":"mykring","client_name":"myKring","aisp":true,"pisp":true,"iface_uuid":"b8fa3454-dab8-42f7-bf3c-a89fbaf1acdd","swagger_file":"https://system.tell.money/v1/swagger/interface/mykring","base_api_path":"https://system.tell.money/v1/"};
