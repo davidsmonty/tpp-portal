@@ -10,7 +10,7 @@ var apps = {
         // Register Events
         this.registerOnclicks();
         // Read Existing Cookie
-       switch(pi) {
+        switch (pi) {
             case 'AppsMain':
                 // code block
 
@@ -72,12 +72,12 @@ var apps = {
         });
     },
 
-    disableEnvironmentOption: function(value){
+    disableEnvironmentOption: function (value) {
 
-        $('#app_env_list option[value="'+value+'"]').attr("disabled", true);
+        $('#app_env_list option[value="' + value + '"]').attr("disabled", true);
 
     },
-    populateOrgProfile: function(profile_data){
+    populateOrgProfile: function (profile_data) {
 
         var path = window.location.pathname // /account/search
         var path_env_full = path.split("/").pop();
@@ -85,7 +85,7 @@ var apps = {
 
 
 
-        if(path_env=='sandbox'){
+        if (path_env == 'sandbox') {
 
 
             if (profile_data.cert_count === 0) {
@@ -93,8 +93,7 @@ var apps = {
                 $('.noApps').show();
                 $('#page_form').hide();
 
-            } else
-            {
+            } else {
                 $('.noApps').hide();
             }
         } else {
@@ -118,23 +117,23 @@ var apps = {
         }
 
 
-        switch(pi) {
+        switch (pi) {
 
 
-        case 'AppsAdd':
-            // code block
-            if (profile_data.active_sandbox === 0) {
-                apps.disableEnvironmentOption('sandbox');
-            }
-            if (profile_data.active_production === 0) {
-                apps.disableEnvironmentOption('production');
-            }
+            case 'AppsAdd':
+                // code block
+                if (profile_data.active_sandbox === 0) {
+                    apps.disableEnvironmentOption('sandbox');
+                }
+                if (profile_data.active_production === 0) {
+                    apps.disableEnvironmentOption('production');
+                }
 
-            break;
+                break;
 
-        default:
-            console.log('Update Other')
-    };
+            default:
+                console.log('Update Other')
+        };
     },
     updateAlertManager: function (action, status) {
 
@@ -200,7 +199,7 @@ var apps = {
 
 
     },
-    populateCertificatesAppView: function(cert_data){
+    populateCertificatesAppView: function (cert_data) {
 
 
 
@@ -208,17 +207,17 @@ var apps = {
 
 
 
-        $.each(cert_data, function() {
+        $.each(cert_data, function () {
 
 
 
-            if(app_env=='sandbox') {
+            if (app_env == 'sandbox') {
 
                 nca_list.append($("<option />").val(this['tell_cert_key']).text(this['nickname'] + ' '));
 
             } else {
 
-                if(this['cert_type']==='eidas'){
+                if (this['cert_type'] === 'eidas') {
                     nca_list.append($("<option />").val(this['tell_cert_key']).text(this['nickname'] + ' '));
                 }
 
@@ -226,7 +225,7 @@ var apps = {
 
         });
 
-        if(cert_key!=''){
+        if (cert_key != '') {
             $('#app_cert_list').val(cert_key);
         }
 
@@ -235,26 +234,26 @@ var apps = {
 
 
     },
-    populateCertificates: function(cert_data){
+    populateCertificates: function (cert_data) {
 
         console.log(cert_data);
 
         var nca_list = $("#app_cert_list");
 
-        $.each(cert_data, function() {
+        $.each(cert_data, function () {
 
             var path = window.location.pathname // /account/search
             var path_env_full = path.split("/").pop();
             var path_env = path.split("-").pop();
 
 
-            if(path_env=='sandbox') {
+            if (path_env == 'sandbox') {
 
                 nca_list.append($("<option />").val(this['tell_cert_key']).text(this['nickname'] + ' '));
 
             } else {
 
-                if(this['cert_type']==='eidas'){
+                if (this['cert_type'] === 'eidas') {
                     nca_list.append($("<option />").val(this['tell_cert_key']).text(this['nickname'] + ' '));
                 }
 
@@ -275,32 +274,32 @@ var apps = {
         apps.updateAlertManager('close', true);
 
 
-            var params = {
-                'tpp-id': tell_user_token_data.client_uuid,
-                'app_name': $('#app_name').val(),
-                'app_icon': '',
-                'app_desc': $('#app_desc').val(),
-                // 'nickname': $('#app_code').val(),
-                'app_website': $('#app_website').val(),
-                'redirect_url': $('#app_redirect').val(),
-                'app_cert': $('#app_cert_list').val(),
-                'app_environment': path_env
+        var params = {
+            'tpp-id': tell_user_token_data.client_uuid,
+            'app_name': $('#app_name').val(),
+            'app_icon': '',
+            'app_desc': $('#app_desc').val(),
+            // 'nickname': $('#app_code').val(),
+            'app_website': $('#app_website').val(),
+            'redirect_url': $('#app_redirect').val(),
+            'app_cert': $('#app_cert_list').val(),
+            'app_environment': path_env
 
-            };
+        };
 
 
-            var ajaxCallData = {
-                type: "POST",
-                url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app',
-                data: JSON.stringify(params),
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-jwt-token": tell_cookie.tell_token
-                }
+        var ajaxCallData = {
+            type: "POST",
+            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app',
+            data: JSON.stringify(params),
+            headers: {
+                "Content-Type": "application/json",
+                "x-jwt-token": tell_cookie.tell_token
+            }
 
-            };
+        };
 
-            tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
+        tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
 
 
 
@@ -313,35 +312,35 @@ var apps = {
         var path = window.location.pathname // /account/search
         var app_id = path.split("/").pop();
 
-        if(app_id==='admin_apps_view.html'){
+        if (app_id === 'admin_apps_view.html') {
             app_id = 'ad0169c7-09e2-4075-bae7-f414a6c06584';
         }
 
 
         var params = {
-                'tpp-id': tell_user_token_data.client_uuid,
-                'app_name': $('#app_name').val(),
-                'app_desc': $('#app_desc').val(),
-               // 'nickname': $('#app_code').val(),
-                'app_website': $('#app_website').val(),
-                'redirect_url': $('#app_redirect').val(),
-                'app_cert': $('#app_cert_list').val(),
-                'app_environment': app_env
-            };
+            'tpp-id': tell_user_token_data.client_uuid,
+            'app_name': $('#app_name').val(),
+            'app_desc': $('#app_desc').val(),
+            // 'nickname': $('#app_code').val(),
+            'app_website': $('#app_website').val(),
+            'redirect_url': $('#app_redirect').val(),
+            'app_cert': $('#app_cert_list').val(),
+            'app_environment': app_env
+        };
 
 
-            var ajaxCallData = {
-                type: "PATCH",
-                url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app/'+app_id,
-                data: JSON.stringify(params),
-                headers: {
-                    "Content-Type": "application/json",
-                    "x-jwt-token": tell_cookie.tell_token
-                }
+        var ajaxCallData = {
+            type: "PATCH",
+            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app/' + app_id,
+            data: JSON.stringify(params),
+            headers: {
+                "Content-Type": "application/json",
+                "x-jwt-token": tell_cookie.tell_token
+            }
 
-            };
+        };
 
-            tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
+        tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
 
 
 
@@ -359,7 +358,7 @@ var apps = {
                 "x-jwt-token": tell_cookie.tell_token
             }
 
-        }; console.log(ajaxCallData)
+        }; 
 
         tell_ajax_handler.caller(this.populateApps, ajaxCallData);
     },
@@ -369,7 +368,7 @@ var apps = {
         var app_id = path.split("/").pop();
 
 
-        if(app_id==='admin_apps_view.html'){
+        if (app_id === 'admin_apps_view.html') {
             app_id = 'ad0169c7-09e2-4075-bae7-f414a6c06584';
         }
 
@@ -377,17 +376,18 @@ var apps = {
 
         var ajaxCallData = {
             type: "GET",
-            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app/'+app_id,
+            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app/' + app_id,
             headers: {
                 "Content-Type": "application/json",
                 "x-jwt-token": tell_cookie.tell_token
-            }
+            } 
 
-        };
+        }; 
+        console.log(ajaxCallData)
 
         tell_ajax_handler.caller(this.populateAppData, ajaxCallData);
     },
-    updateAppIcon: function(){
+    updateAppIcon: function () {
 
 
         const preview = $('#icon_pic_large');
@@ -403,8 +403,8 @@ var apps = {
         reader.addEventListener("load", function () {
             // convert image file to base64 string
             preview.src = reader.result;
-            $("#icon_pic_large").attr("src",reader.result);
-            apps.image_uploader(reader.result,fileType);
+            $("#icon_pic_large").attr("src", reader.result);
+            apps.image_uploader(reader.result, fileType);
             console.log('Attempt Image upload')
 
         }, false);
@@ -415,7 +415,7 @@ var apps = {
 
 
     },
-    image_uploader: function(img_data,type){
+    image_uploader: function (img_data, type) {
 
 
         var path = window.location.pathname // /account/search
@@ -424,17 +424,17 @@ var apps = {
 
 
         var params = {
-            'image' : img_data,
-            'image_type' : type
+            'image': img_data,
+            'image_type': type
         };
 
         var ajaxCallData = {
             type: "POST",
-            url: _config.base_api_path+"tpp/"+ tell_user_token_data.client_uuid +'/app/'+ app_id +'/app-icon',
+            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid + '/app/' + app_id + '/app-icon',
             data: JSON.stringify(params),
             headers: {
                 "Content-Type": "application/json",
-                "x-jwt-token" : tell_cookie.tell_token
+                "x-jwt-token": tell_cookie.tell_token
             }
 
         };
@@ -443,7 +443,7 @@ var apps = {
 
 
 
-    },updateImageResponseHandler: function(profile_data){
+    }, updateImageResponseHandler: function (profile_data) {
 
         console.log(profile_data);
         org.updateAlertManager('show', true);
@@ -462,10 +462,9 @@ var apps = {
 
         console.log(data.status);
 
-        if(data.status==='error'){
+        if (data.status === 'error') {
             apps.updateAlertManager('show', false);
-        } else
-        {
+        } else {
             apps.updateAlertManager('show', true);
 
             setTimeout(function () {
@@ -548,16 +547,16 @@ var apps = {
 
 
     },
-    getOrganisation: function(){
+    getOrganisation: function () {
 
-        var params = { };
+        var params = {};
 
         var ajaxCallData = {
             type: "GET",
-            url: _config.base_api_path+"tpp/"+ tell_user_token_data.client_uuid,
+            url: _config.base_api_path + "tpp/" + tell_user_token_data.client_uuid,
             headers: {
                 "Content-Type": "application/json",
-                "x-jwt-token" : tell_cookie.tell_token
+                "x-jwt-token": tell_cookie.tell_token
             }
 
         };
@@ -571,26 +570,26 @@ var apps = {
 
         $('.sandboxNoApp').hide();
 
-        if ( myapp.environment === 'production'){ $('.productionNoApp').hide(); } else { $('.sandboxNoApp').hide(); }
+        if (myapp.environment === 'production') { $('.productionNoApp').hide(); } else { $('.sandboxNoApp').hide(); }
 
-        var env_vector = ( myapp.environment === 'production') ? 'file__icon--production' : 'file__icon--sandbox';
-        var env_section = ( myapp.environment === 'production') ? 'productionAppContainer' : 'sandboxAppContainer';
-        var app_icon = ( myapp.app_icon !== '') ? '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="'+myapp.app_icon+'">': '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="'+myapp.app_icon+'">';
+        var env_vector = (myapp.environment === 'production') ? 'file__icon--production' : 'file__icon--sandbox';
+        var env_section = (myapp.environment === 'production') ? 'productionAppContainer' : 'sandboxAppContainer'; 
+        var app_icon = (myapp.app_icon !== '') ? '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="' + myapp.app_icon + '">' : '<img class="app_icon_view" alt="Company Logo" id="icon_pic_large" src="' + myapp.app_icon + '">';
 
 
         var app_icon = '<div class="intro-y col-span-6 sm:col-span-4 md:col-span-3 xxl:col-span-2">' +
             '<div class="file box rounded-md px-5 pt-5 pb-5 px-3 sm:px-5 relative zoom-in">' +
 
-            '<a href="/applications/'+myapp.app_id+'" class="w-3/5 file__icon ' + env_vector + ' mx-auto">' +
+            '<a href="/applications/' + myapp.app_id + '" class="w-3/5 file__icon ' + env_vector + ' mx-auto">' +
 
             '<div class="file__icon__file-name">' + app_icon + '</div></a>' +
-            '<a href="/applications/'+myapp.app_id+'" class="block font-medium mt-4 text-center truncate">' + myapp.app_name + '</a>' +
+            '<a href="/applications/' + myapp.app_id + '" class="block font-medium mt-4 text-center truncate">' + myapp.app_name + '</a>' +
 
 
             '</div>' +
             '</div>';
 
-        $('#'+env_section).append(app_icon);
+        $('#' + env_section).append(app_icon);
 
 
 
@@ -605,16 +604,16 @@ apps.initialise();
 var form_options = {
     rules: {
         app_name: "required",
-        app_desc: {required: true},
+        app_desc: { required: true },
         app_code: "required",
         app_website: {
             required: true,
             url: true
         },
         app_redirect: {
-                required: true,
-                url: true
-            },
+            required: true,
+            url: true
+        },
         app_cert_list: "required",
         app_env_list: "required"
     },
