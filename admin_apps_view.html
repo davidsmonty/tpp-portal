@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
 
     <!-- Client Config -->
@@ -95,16 +95,16 @@
     <!-- /.navbar -->
 
 
-
     <main class="main-content app">
+
         <div class="flex">
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
 
                 <div class="side-nav__devider my-6 mt-7"></div>
                 <ul id="admin_menu">
-                    <!-- BEGIN: Dynaimcally Created Side Menu -->
-                    <!-- END: Dynaimcally Created Side Menu -->
+
+
                 </ul>
             </nav>
             <!-- END: Side Menu -->
@@ -113,82 +113,181 @@
                 <!-- BEGIN: Top Bar -->
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
-                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="" class="">Administration</a> <i
-                            class="ti-angle-right breadcrumb__icon"></i> <a href=""
-                            class="breadcrumb--active">Applications</a> </div>
+                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a class="">Administration</a> <i
+                            class="ti-angle-right breadcrumb__icon"></i> <a class="breadcrumb--active">Your Apps</a> <i
+                            class="ti-angle-right breadcrumb__icon"></i> <a class="breadcrumb--active">View App</a>
+                    </div>
                     <!-- END: Breadcrumb -->
                 </div>
                 <!-- END: Top Bar -->
-                <div class="top-bar top-bar-new flex ">
-                    <!-- BEGIN: Breadcrumb -->
-                    <div>Sandbox Applications </div><!-- END: Breadcrumb -->
-                    <div class="w-full sm:w-auto " style="padding: 10px; ">
-                        <a href="/applications-add-sandbox">
-                            <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Sandbox
-                                App</button>
-                        </a>
-                    </div>
+                <div class="intro-y flex items-center mt-5">
+                    <h2 class="text-lg font-medium mr-auto">
+                        View App Details
+                    </h2>
                 </div>
-                <div class="grid grid-cols-12 gap-6 ">
+                <div class="grid grid-cols-12 gap-6">
+                    <!-- BEGIN: Profile Menu -->
+                    <div class="col-span-12 lg:col-span-4 xxl:col-span-3 flex lg:block flex-col-reverse">
+                        <div class="col-span-12 xl:col-span-4">
+                            <div class="border border-gray-200 rounded-md p-5">
+                                <div class="w-40-apps h-40-apps relative image-fit-2 cursor-pointer zoom-in mx-auto">
+                                    <img class="rounded-md" alt="App Icon" id="icon_pic_large" src="">
+                                    <div title="Remove this profile photo?"
+                                        class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2">
+                                        <i data-feather="x" class="w-4 h-4"></i> </div>
+                                </div>
+                                <div class="w-40 mx-auto cursor-pointer relative mt-5">
+                                    <button type="button" class="button w-full bg-theme-1 text-white">Change
+                                        Icon</button>
+                                    <input type="file" onchange="apps.updateAppIcon()" id="app_icon_new"
+                                        class="w-full h-full top-0 left-0 absolute opacity-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Profile Menu -->
+                    <div class="col-span-12 lg:col-span-8 xxl:col-span-9">
+                        <!-- BEGIN: Display Information -->
+                        <div class="intro-y box lg:mt-5">
+                            <div class="flex items-center p-5 border-b border-gray-200">
+                                <h2 class="font-medium text-base mr-auto">
+                                    App Information
+                                </h2>
+                            </div>
+                            <div class="p-5">
 
-                    <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
-                        <!-- BEGIN: File Manager Filter -->
-                        <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
-                            <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
+                                <div class="grid grid-cols-12 gap-5">
 
+                                    <div class="col-span-12 xl:col-span-12">
+                                        <form id="page_form" class="col-span-12 xl:col-span-8" novalidate>
+                                            <div class="updateAlertSuccess rounded-md flex items-center px-5 py-4 mb-5 bg-theme-18  text-center"
+                                                style="display: none">
+                                                <i data-feather="alert-triangle"
+                                                    class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated
+                                                    Successfully</span><i data-feather="x"
+                                                    class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
+                                            </div>
+                                            <div class="updateAlertFailure rounded-md flex items-center px-5 py-4 mb-5 bg-theme-31  text-center"
+                                                style="display: none">
+                                                <i data-feather="alert-triangle"
+                                                    class=" ti-check-box w-6 h-6 mr-2 mt-2"></i><span>Updated
+                                                    Error</span><i data-feather="x"
+                                                    class="ti-close mt-2 w-6 h-6 ml-auto closeUpdateAlert"></i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">App UUID <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="The App Unique Identifier">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span></label>
+                                                    <input type="text" id="app_uuid" class="input w-full border mt-2"
+                                                        placeholder="Application UUID" name="app_uuid" style="background-color: #296299; text-align: center;
+    color: #fff;
+    font-size: 17px;">
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">App Name <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Provide a description for your App - this will be visible to your users and account providers">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span></label>
+                                                    <input type="text" id="app_name" class="input w-full border mt-2"
+                                                        placeholder="Application Name" name="app_name">
+
+                                                </div>
+                                            </div>
+                                            <!--  <div class="form-group">
+                                              <div class="mt-3">
+                                                  <label class="flex flex-col sm:flex-row">App Icon<span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">* Mandatory</span></label>
+                                                  <input type="file"  id="app_icon" class="input w-full border mt-2">
+                                              </div>
+                                          </div> !-->
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">App Description <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Provide a name for your App - this will be visible to your users and account providers">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span></label>
+                                                    <textarea id="app_desc" class="input w-full border mt-2"
+                                                        name="app_desc" rows="4" placeholder="Application Description"
+                                                        cols="50"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">App Website <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Provide the website relating to this app - this will be visible to your users and account providers">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span></label>
+                                                    <input type="text" id="app_website" class="input w-full border mt-2"
+                                                        placeholder="Application Website" name="app_website">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+                                                    <label class="flex flex-col sm:flex-row">App Redirect URL <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Provide a URL for users to return to after completing authorisation with their account provider. This is the location on your application that will receive a returned user and which you will need to configure to complete the process as described in our documentation. Don’t worry - this can be changed at any time">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span></label>
+                                                    <input type="text" id="app_redirect"
+                                                        class="input w-full border mt-2"
+                                                        placeholder="Application Redirect URL" name="app_redirect">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="mt-3">
+
+                                                    <label class="flex flex-col sm:flex-row">App Certificate <span
+                                                            data-toggle="tooltip" data-placement="bottom"
+                                                            title="Select one of your certificates from the list, or go to Organisation to add a new one">&nbsp;&nbsp;&nbsp;<i
+                                                                class="ti-info-alt text-primary"></i></span><span
+                                                            class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">*
+                                                            Mandatory</span> </label>
+                                                    <div class="mt-2">
+                                                        <select class="input w-full  border mr-2" id="app_cert_list"
+                                                            name="app_cert_list">
+                                                            <option value="">Please Select Certificate Environment
+                                                            </option>
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="mt-5">
+                                                <button class="button unclicked_form_button bg-theme-9" type="submit"
+                                                    value="Submit"> <span class="saving_btn"> Saving </span><span
+                                                        class="save_btn"> Save </span><span class="ready_btn">
+                                                        Ready</span> <i data-loading-icon="oval" data-color="white"
+                                                        class="w-4 h-4 ml-auto fa fa-circle-o-notch fa-spin"></i>
+                                                </button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
 
                             </div>
-
                         </div>
-                        <!-- END: File Manager Filter -->
-                        <!-- BEGIN: Directory & Files -->
-                        <div id="sandboxAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
-                            <div class="noApps sandboxNoApp">You don't have any sandbox applications. Click the "Create
-                                New Sandbox App" button to create one now. </div>
-                        </div>
-                        <!-- END: Directory & Files -->
-                        <!-- BEGIN: Pagination -->
+                        <!-- END: Display Information -->
 
-                        <!-- END: Pagination -->
-                    </div>
-                </div>
-                <div class="top-bar top-bar-new flex">
-                    <!-- BEGIN: Breadcrumb -->
-                    Production Applications
-                    <!-- END: Breadcrumb -->
-                    <div class="w-full sm:w-auto flex" style="padding: 10px;">
-                        <a href="/applications-add-production">
-                            <button href="" class="button text-white bg-theme-1 shadow-md mr-2">Create New Production
-                                App</button>
-                        </a>
-
-
-
-                    </div>
-                </div>
-                <div class="grid grid-cols-12 gap-6 ">
-
-                    <div class="col-span-12 lg:col-span-12 xxl:col-span-12">
-                        <!-- BEGIN: File Manager Filter -->
-                        <div class="intro-y flex flex-col-reverse sm:flex-row items-center">
-                            <div class="w-full sm:w-auto relative mr-auto mt-3 sm:mt-0">
-
-
-                            </div>
-
-                        </div>
-                        <!-- END: File Manager Filter -->
-                        <!-- BEGIN: Directory & Files -->
-                        <div id="productionAppContainer" class="intro-y grid grid-cols-12 gap-3 sm:gap-6 mt-5">
-
-                            <div class="noApps productionNoApp">You don't have any production applications. Click the
-                                "Create New Production App" button to create one now. </div>
-
-                        </div>
-                        <!-- END: Directory & Files -->
-                        <!-- BEGIN: Pagination -->
-
-                        <!-- END: Pagination -->
                     </div>
                 </div>
             </div>
@@ -196,6 +295,9 @@
     </main>
 
 
+
+
+    <!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -218,15 +320,21 @@
             </div>
             <div class="row gap-y align-items-center">
                 <div class="col-md-12" style="
-      font-size: 12px;
-      text-align: center;
-      color: #989797;
-    ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+    font-size: 12px;
+    text-align: center;
+    color: #989797;
+">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
             </div>
         </div>
     </footer>
-    </div>
     <!-- /.footer -->
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <span class="loading_a">t<span class="period">.</span></span>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
 
 
     <!-- Site Configuration Data -->
@@ -234,7 +342,7 @@
     <!-- /Site Configuration Data -->
 
     <!-- Page Configuration Data -->
-    <script> var pmi = 'Your Apps'; var pi = 'AppsMain';  </script>
+    <script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
     <!-- /Page Configuration Data -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -243,10 +351,10 @@
     <script src="./assets/js/general.js"></script>
     <script src="./assets/js/underscore.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/apps.js?v=1"></script>
+    <script src="./assets/js/org.js?v=1"></script>
     <script src="./assets/js/v_logic.js"></script>
     <script src="./assets/js/customise.js"></script>
-
+    <!-- <script src="./assets/js/apps.js?v=1"></script> -->
 
     <!-- /.Scripts -->
 
