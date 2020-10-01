@@ -41,340 +41,345 @@
 
 </head>
 
-<!-- Navbar -->
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
-	<div class="container">
-		<div class="navbar-left">
-			<button class="navbar-toggler" type="button">&#9776;</button>
-			<a class="navbar-brand" href="/">
-				<img id="logo-dark" class="logo-dark" alt="logo">
-				<img id="logo-light" class="logo-light" alt="logo">
-			</a>
-		</div>
-		<section class="navbar-mobile">
-			<ul class="nav nav-navbar mr-auto">
-			</ul>
-			<div class="w-30">
-				<div class="flex" id="greeting-options" style="display: none">
-					<div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
-					<!-- BEGIN: Account Menu -->
-					<div class="intro-x dropdown w-60 h-8 relative">
-						<div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-							<img id="profile-picture--header" alt="ProfilePic" src="">
-						</div>
-						<div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
-							<div class="dropdown-box__content box bg-theme-38 text-white">
-								<div class="p-4 border-b border-theme-40">
-									<div class="font-medium full-name"></div>
-									<div class="text-xs text-theme-41 role-name"></div>
-								</div>
-								<div class="p-2" id="profile_menu">
-								</div>
-								<div class="p-2 border-t border-theme-40">
-									<a
-										class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
-										<i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+	<!-- Navbar -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="sticky">
+		<div class="container">
+			<div class="navbar-left">
+				<button class="navbar-toggler" type="button">&#9776;</button>
+				<a class="navbar-brand" href="/">
+					<img id="logo-dark" class="logo-dark" alt="logo">
+					<img id="logo-light" class="logo-light" alt="logo">
+				</a>
+			</div>
+			<section class="navbar-mobile">
+				<ul class="nav nav-navbar mr-auto">
+				</ul>
+				<div class="w-30">
+					<div class="flex" id="greeting-options" style="display: none">
+						<div id="loggedInBox" class="full-name w-60 h-8" style="display: none"></div>
+						<!-- BEGIN: Account Menu -->
+						<div class="intro-x dropdown w-60 h-8 relative">
+							<div
+								class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+								<img id="profile-picture--header" alt="ProfilePic" src="">
+							</div>
+							<div class="dropdown-box  absolute w-56 top-0 right-0 z-20">
+								<div class="dropdown-box__content box bg-theme-38 text-white">
+									<div class="p-4 border-b border-theme-40">
+										<div class="font-medium full-name"></div>
+										<div class="text-xs text-theme-41 role-name"></div>
+									</div>
+									<div class="p-2" id="profile_menu">
+									</div>
+									<div class="p-2 border-t border-theme-40">
+										<a
+											class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md logout-action">
+											<i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- END: Account Menu -->
 					</div>
-					<!-- END: Account Menu -->
+					<div id="logInBox">
+						<a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
+						<a class="btn btn-sm btn-success" href="./login">Sign In</a>
+					</div>
 				</div>
-				<div id="logInBox">
-					<a class="btn btn-sm btn-light ml-lg-5 mr-2" href="./register">Register</a>
-					<a class="btn btn-sm btn-success" href="./login">Sign In</a>
-				</div>
-			</div>
-		</section>
-	</div>
-</nav>
-<!-- /.navbar -->
+			</section>
+		</div>
+	</nav>
+	<!-- /.navbar -->
 
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
+	<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- START -->
 
-<header class="header" style="background-color: #f1f6fa">
-	<div class="container">
-		<h1 style="text-align:center;">Tell Connect Statistics</h1>
-		<p class="lead" style="text-align: center;">The statistics provided on the page are for illustration
-			purposes only and on "go live"<br> will be replaced with dynamic live data in regulatory-compliant
-			format. </p>
-	</div>
-</header><!-- /.header -->
+	<header class="header" style="background-color: #f1f6fa">
+		<div class="container">
+			<h1 style="text-align:center;">Tell Connect Statistics</h1>
+			<p class="lead" style="text-align: center;">The statistics provided on the page are for illustration
+				purposes only and on "go live"<br> will be replaced with dynamic live data in regulatory-compliant
+				format. </p>
+		</div>
+	</header><!-- /.header -->
 
 
-<!-- Main Content -->
-<main class="main-content">
-	<div class="container">
-		<div class="row">
-			<!--
+	<!-- Main Content -->
+	<main class="main-content">
+		<div class="container">
+			<div class="row">
+				<!--
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             | Sidebar
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
-			<div class="col-md-4 col-xl-3">
-				<aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
-					<div class="sidebar-body">
-						<ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
-							<li class="nav-item">
-								<a class="nav-link" href="#intro">Introduction<i class="nav-angle"></i></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#avl">Availability <i class="nav-angle"></i></a>
-								<div class="nav">
-									<a class="nav-link" href="#sandbox_avl">Sandbox API</a>
-									<a class="nav-link" href="#production_avl">Production API</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#success">Successful API Calls <i class="nav-angle"></i></a>
-								<div class="nav">
-									<a class="nav-link" href="#sandbox_success">Sandbox API</a>
-									<a class="nav-link" href="#production_success">Production API</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#reponsetimes">API Response Times <i
-										class="nav-angle"></i></a>
-								<div class="nav">
-									<a class="nav-link" href="#sandbox_reponsetimes">Sandbox API</a>
-									<a class="nav-link" href="#production_reponsetimes">Production API</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#rejected">Rejected API Responses<i class="nav-angle"></i></a>
-								<div class="nav">
-									<a class="nav-link" href="#sandbox_rejected">Sandbox API</a>
-									<a class="nav-link" href="#production_rejected">Production API</a>
-								</div>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#kpm">Key Performance Metrics <i class="nav-angle"></i></a>
-								<div class="nav">
-									<a class="nav-link" href="#sandbox_kpm">Sandbox API</a>
-									<a class="nav-link" href="#production_kpm">Production API</a>
-								</div>
-							</li>
+				<div class="col-md-4 col-xl-3">
+					<aside class="sidebar sidebar-expand-md sidebar-sticky pr-md-4 br-1">
+						<div class="sidebar-body">
+							<ul class="nav nav-sidebar nav-sidebar-hero nav-sidebar-pill">
+								<li class="nav-item">
+									<a class="nav-link" href="#intro">Introduction<i class="nav-angle"></i></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#avl">Availability <i class="nav-angle"></i></a>
+									<div class="nav">
+										<a class="nav-link" href="#sandbox_avl">Sandbox API</a>
+										<a class="nav-link" href="#production_avl">Production API</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#success">Successful API Calls <i
+											class="nav-angle"></i></a>
+									<div class="nav">
+										<a class="nav-link" href="#sandbox_success">Sandbox API</a>
+										<a class="nav-link" href="#production_success">Production API</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#reponsetimes">API Response Times <i
+											class="nav-angle"></i></a>
+									<div class="nav">
+										<a class="nav-link" href="#sandbox_reponsetimes">Sandbox API</a>
+										<a class="nav-link" href="#production_reponsetimes">Production API</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#rejected">Rejected API Responses<i
+											class="nav-angle"></i></a>
+									<div class="nav">
+										<a class="nav-link" href="#sandbox_rejected">Sandbox API</a>
+										<a class="nav-link" href="#production_rejected">Production API</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#kpm">Key Performance Metrics <i
+											class="nav-angle"></i></a>
+									<div class="nav">
+										<a class="nav-link" href="#sandbox_kpm">Sandbox API</a>
+										<a class="nav-link" href="#production_kpm">Production API</a>
+									</div>
+								</li>
 
-						</ul>
-					</div>
-				</aside>
-			</div>
+							</ul>
+						</div>
+					</aside>
+				</div>
 
 
-			<!--
+				<!--
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             | Content
             |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
             !-->
-			<div class="col-md-7 col-xl-8 ml-md-auto py-8">
-				<h2 id="intro">Introduction</h2>
-				<p class="lead-2">{{Tell-Client}} in partnership with tell connect are committed to providing
-					resilient, fast and high availability APIs.</p>
+				<div class="col-md-7 col-xl-8 ml-md-auto py-8">
+					<h2 id="intro">Introduction</h2>
+					<p class="lead-2">{{Tell-Client}} in partnership with tell connect are committed to providing
+						resilient, fast and high availability APIs.</p>
 
 
-				<hr class="hr-dash my-7">
-				<h2 id="avl">Availability</h2>
-				<p class="lead-2">This chart shows the average availability of the {{Tell-Client}} apis to third
-					party providers by month.</p>
-				<hr class="hr-dash my-7">
-				<h3 id="sandbox_avl">Sandbox</h3>
-				<p>Sandbox Availability</p>
-				<canvas id="avl_sandbox"></canvas>
-				<h3 id="production_avl">Production</h3>
-				<p>Production Availability</p>
-				<canvas id="avl_production"></canvas>
+					<hr class="hr-dash my-7">
+					<h2 id="avl">Availability</h2>
+					<p class="lead-2">This chart shows the average availability of the {{Tell-Client}} apis to third
+						party providers by month.</p>
+					<hr class="hr-dash my-7">
+					<h3 id="sandbox_avl">Sandbox</h3>
+					<p>Sandbox Availability</p>
+					<canvas id="avl_sandbox"></canvas>
+					<h3 id="production_avl">Production</h3>
+					<p>Production Availability</p>
+					<canvas id="avl_production"></canvas>
 
-				<hr class="hr-dash my-7">
-				<h2 id="success">Successful API Calls</h2>
-				<p class="lead-2">This chart shows the number of successful API calls made by third party providers
-					using {{Tell-Client}} PSD2 APIs powered by tell connect.</p>
-				<hr class="hr-dash my-7">
-				<h3 id="sandbox_success">Sandbox</h3>
-				<p>Sandbox Successful Calls</p>
-				<canvas id="success_sandbox"></canvas>
-				<h3 id="production_success">Production</h3>
-				<p>Production Successful Calls</p>
-				<canvas id="success_production"></canvas>
+					<hr class="hr-dash my-7">
+					<h2 id="success">Successful API Calls</h2>
+					<p class="lead-2">This chart shows the number of successful API calls made by third party providers
+						using {{Tell-Client}} PSD2 APIs powered by tell connect.</p>
+					<hr class="hr-dash my-7">
+					<h3 id="sandbox_success">Sandbox</h3>
+					<p>Sandbox Successful Calls</p>
+					<canvas id="success_sandbox"></canvas>
+					<h3 id="production_success">Production</h3>
+					<p>Production Successful Calls</p>
+					<canvas id="success_production"></canvas>
 
-				<hr class="hr-dash my-7">
-				<h2 id="reponsetimes">API Response Times</h2>
-				<p class="lead-2">This chart shows the average response time for API calls made using
-					{{Tell-Client}} PSD2 APIs powered by tell connect.</p>
-				<hr class="hr-dash my-7">
-				<h3 id="sandbox_reponsetimes">Sandbox</h3>
-				<p>Sandbox Average Response Times</p>
-				<canvas id="reponsetimes_sandbox"></canvas>
-				<h3 id="production_reponsetimes">Production</h3>
-				<p>Production Average Response Times</p>
-				<canvas id="reponsetimes_production"></canvas>
+					<hr class="hr-dash my-7">
+					<h2 id="reponsetimes">API Response Times</h2>
+					<p class="lead-2">This chart shows the average response time for API calls made using
+						{{Tell-Client}} PSD2 APIs powered by tell connect.</p>
+					<hr class="hr-dash my-7">
+					<h3 id="sandbox_reponsetimes">Sandbox</h3>
+					<p>Sandbox Average Response Times</p>
+					<canvas id="reponsetimes_sandbox"></canvas>
+					<h3 id="production_reponsetimes">Production</h3>
+					<p>Production Average Response Times</p>
+					<canvas id="reponsetimes_production"></canvas>
 
-				<hr class="hr-dash my-7">
-				<h2 id="rejected">Rejected API Responses</h2>
-				<p class="lead-2">This chart shows the number of failed API calls made using {{Tell-Client}} PSD2
-					APIs powered by tell connect.</p>
-				<hr class="hr-dash my-7">
-				<h3 id="sandbox_rejected">Sandbox</h3>
-				<p>Rejected Sandbox Calls</p>
-				<canvas id="rejected_sandbox"></canvas>
-				<h3 id="production_rejected">Production</h3>
-				<p>Rejected Production Calls</p>
-				<canvas id="rejected_production"></canvas>
+					<hr class="hr-dash my-7">
+					<h2 id="rejected">Rejected API Responses</h2>
+					<p class="lead-2">This chart shows the number of failed API calls made using {{Tell-Client}} PSD2
+						APIs powered by tell connect.</p>
+					<hr class="hr-dash my-7">
+					<h3 id="sandbox_rejected">Sandbox</h3>
+					<p>Rejected Sandbox Calls</p>
+					<canvas id="rejected_sandbox"></canvas>
+					<h3 id="production_rejected">Production</h3>
+					<p>Rejected Production Calls</p>
+					<canvas id="rejected_production"></canvas>
 
-				<hr class="hr-dash my-7">
-				<h2 id="kpm">Key Performance Metrics</h2>
-				<p class="lead-2">This chart shows the average availability of the {{Tell-Client}} apis to third
-					party providers by month.</p>
-				<hr class="hr-dash my-7">
-				<h3 id="sandbox_kpm">Sandbox</h3>
-				<p>Sandbox Key Performance Metrics</p>
-				<canvas id="kpm_sandbox"></canvas>
-				<h3 id="production_kpm">Production</h3>
-				<p>Production Key Performance Metrics</p>
-				<canvas id="kpm_production"></canvas>
+					<hr class="hr-dash my-7">
+					<h2 id="kpm">Key Performance Metrics</h2>
+					<p class="lead-2">This chart shows the average availability of the {{Tell-Client}} apis to third
+						party providers by month.</p>
+					<hr class="hr-dash my-7">
+					<h3 id="sandbox_kpm">Sandbox</h3>
+					<p>Sandbox Key Performance Metrics</p>
+					<canvas id="kpm_sandbox"></canvas>
+					<h3 id="production_kpm">Production</h3>
+					<p>Production Key Performance Metrics</p>
+					<canvas id="kpm_production"></canvas>
 
 
 
+
+				</div>
 
 			</div>
-
 		</div>
-	</div>
-</main><!-- /.main-content -->
+	</main><!-- /.main-content -->
 
-<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
+	<!-- THIS PART CHANGES AND IS PAGE SPECIFIC -- END -->
 
-<!-- Footer -->
-<footer class="footer">
-	<div class="container">
-		<div class="row gap-y align-items-center">
-			<div class="col-md-2">
-				<a class="nav-link" href="http://connect.tell.money">
-					<img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
-				</a>
-			</div>
-			<div class="col-md-8">
-				<div class="nav justify-content-center justify-content-md-start">
-					<a class="nav-link" href="/">Home</a>
-					<a class="nav-link" href="./specs">Specifications</a>
-					<a class="nav-link" href="./get-started">Getting Started</a>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row gap-y align-items-center">
+				<div class="col-md-2">
+					<a class="nav-link" href="http://connect.tell.money">
+						<img class="logo-dark" src="./assets/img/tell-connect-logo.png" alt="Tell Logo">
+					</a>
+				</div>
+				<div class="col-md-8">
+					<div class="nav justify-content-center justify-content-md-start">
+						<a class="nav-link" href="/">Home</a>
+						<a class="nav-link" href="./specs">Specifications</a>
+						<a class="nav-link" href="./get-started">Getting Started</a>
+					</div>
+				</div>
+				<div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
 				</div>
 			</div>
-			<div class="col-md-2 text-center text-md-right"> <a href="https://tell.money">© Tell Money Limited</a>
-			</div>
-		</div>
-		<div class="row gap-y align-items-center">
-			<div class="col-md-12" style="
+			<div class="row gap-y align-items-center">
+				<div class="col-md-12" style="
     font-size: 12px;
     text-align: center;
     color: #989797;
 ">Tell Connect is part of Tell Money Limited, Company No.12429774 ©2020 by Tell Connect</div>
+			</div>
 		</div>
-	</div>
-</footer>
-<!-- /.footer -->
+	</footer>
+	<!-- /.footer -->
 
-<!-- Loader -->
-<div id="loader-wrapper">
-	<span class="loading_a">t<span class="period">.</span></span>
-	<div class="loader-section section-left"></div>
-	<div class="loader-section section-right"></div>
-</div>
+	<!-- Loader -->
+	<div id="loader-wrapper">
+		<span class="loading_a">t<span class="period">.</span></span>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
 
 	<!-- Site Configuration Data -->
 	<script src="./assets/data/site_data.js"></script>
 	<!-- /Site Configuration Data -->
 
-<!-- Page Configuration Data -->
-<script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
-<!-- /Page Configuration Data -->
+	<!-- Page Configuration Data -->
+	<script> var pmi = 'Organisation'; var pi = 'OrganisationProfile';  </script>
+	<!-- /Page Configuration Data -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="./assets/js/page.min.js"></script>
-<script src="./assets/js/auth.js"></script>
-<script src="./assets/js/general.js"></script>
-<script src="./assets/js/underscore.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/org.js?v=1"></script>
-<script src="./assets/js/v_logic.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="./assets/js/page.min.js"></script>
+	<script src="./assets/js/auth.js"></script>
+	<script src="./assets/js/general.js"></script>
+	<script src="./assets/js/underscore.js"></script>
+	<script src="./assets/js/jquery.validate.min.js"></script>
+	<script src="./assets/js/customise.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
-	crossorigin="anonymous"></script>
-<script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
+		crossorigin="anonymous"></script>
+	<script>
 
-	var ctx = document.getElementById('avl_sandbox');
-	var myBarChart = new Chart(ctx, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Availability", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx = document.getElementById('avl_sandbox');
+		var myBarChart = new Chart(ctx, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Availability", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('avl_production');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Availability", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('avl_production');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Availability", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx = document.getElementById('success_sandbox');
-	var myBarChart = new Chart(ctx, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Successful Calls", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx = document.getElementById('success_sandbox');
+		var myBarChart = new Chart(ctx, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Successful Calls", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('success_production');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Successful Calls", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('success_production');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Successful Calls", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('reponsetimes_sandbox');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Response Times", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('reponsetimes_sandbox');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Response Times", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('reponsetimes_production');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'horizontalBar',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Response Times", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('reponsetimes_production');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'horizontalBar',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Response Times", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('rejected_sandbox');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'line',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Rejected Calls", "data": [10, 8, 5, 5, 3, 1, 3], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('rejected_sandbox');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'line',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox Rejected Calls", "data": [10, 8, 5, 5, 3, 1, 3], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('rejected_production');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'line',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Rejected Calls", "data": [10, 8, 5, 5, 3, 1, 3], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('rejected_production');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'line',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production Rejected Calls", "data": [10, 8, 5, 5, 3, 1, 3], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('kpm_sandbox');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'pie',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox KPM", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('kpm_sandbox');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'pie',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Sandbox KPM", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-	var ctx2 = document.getElementById('kpm_production');
-	var myBarChart2 = new Chart(ctx2, {
-		type: 'pie',
-		data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production KPM", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
-		options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
-	});
+		var ctx2 = document.getElementById('kpm_production');
+		var myBarChart2 = new Chart(ctx2, {
+			type: 'pie',
+			data: { "labels": ["January 2020", "February 2020", "March 2020", "April 2020"], "datasets": [{ "label": "Production KPM", "data": [98, 99, 100, 98, 97, 98, 100], "fill": false, "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"], "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"], "borderWidth": 1 }] },
+			options: { "scales": { "xAxes": [{ "ticks": { "beginAtZero": true } }] } }
+		});
 
-</script>
+	</script>
 
-<!-- /.Scripts -->
+	<!-- /.Scripts -->
 
 
 </body>
