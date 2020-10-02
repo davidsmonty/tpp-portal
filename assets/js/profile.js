@@ -419,6 +419,8 @@ if(file!==undefined) {
 
         profile.updateAlertManager('show', true);
 
+        console.log(profile_data)
+
         profile.populateUserProfile(profile_data);
 
         $('.unclicked_form_button').removeClass('saving');
