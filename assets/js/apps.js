@@ -461,9 +461,7 @@ var apps = {
         } else {
             apps.updateAlertManager('show', true);
 
-            setTimeout(function () {
-                apps.redirect("/applications");
-            }, 2000);
+          
 
         }
 
