@@ -767,8 +767,8 @@
                             <div class="col-md-6 part-txt order-2 order-sm-1" >
 
                                 <p class="hdr h-1">Thank you</p>
-                                <p class="hdr h-2">Email Sent</p>
-                                <p class="txt info">
+                                <p class="hdr h-2 methodOfComms">Email Sent</p>
+                                <p class="txt info methodOfCommsInfo">
                                     You will recieve an email shortly with a link to begin your consent journey.
                                 </p>
 
@@ -803,8 +803,8 @@
                                         </div>
                                         <p class="" style="padding-top: 15px; color: #727272; text-align: center;">------ or ------</p>
                                         <div class="form-line part-1">
-                                            <label for="inp-email" class="secondlabel">Mobile Number</label>
-                                            <input type="email" id="inp-phone" name="inp-email" class="form-control"
+                                            <label for="inp-phone" class="secondlabel">Mobile Number</label>
+                                            <input type="number" id="inp-phone" name="inp-phone" class="form-control"
                                                    placeholder="+44 123 123 123">
 
                                             <div class="ntf-error error-email" style="display: none;"></div>
@@ -849,6 +849,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/js/utils.js" integrity="sha256-Dgk4ywhuqU0wvPuVIPRY9AtcRW0G7YaGT/MCLDAVDNE=" crossorigin="anonymous"></script>
 <script>
 
+    /* FOR DEV ONLY */
+    var _config = {};
+
+        _config.base_api_path = 'https://system.tell.money/dev/';
+        _config.subdomain = 'lanistardev';
 
     var consent_initialise = {
             initiate: function(){
@@ -860,22 +865,25 @@
                 $(document).on("click", ".submit-email", function (event) {
 
                     // validate form
+                    var phone = $('#inp-phone').val();
+                    if(phone.substring(0,1)=='0'){ phone = "+44"+phone.substring(1,20); }
+                    if(phone.substring(0,1)=='4'){ phone = "+"+phone; }
+                    $('#inp-phone').val(phone);
                     var v_email = consent_initialise.checkEmail($('#inp-email').val());
-                    var v_phone = consent_initialise.checkMobile($('#inp-phone').val());
+                    var v_phone = consent_initialise.checkMobile(phone);
+
 
                     if(v_email===false && v_phone === false){
                         $('.error-message').show();
                     } else
                     {
                         $('.error-message').hide();
-                        consent_initialise.prepare_call();
+                        consent_initialise.prepare_call($('#inp-email').val(),phone);
                     }
 
-//                    console.log(v_phone);
-                    //
                 });
             },
-            prepare_call: function(){
+            prepare_call: function(email,phone){
 
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
@@ -883,8 +891,8 @@
                 var params = {
                     subdomain: _config.subdomain,
                     body : {
-                        email : $('#inp-email').val(),
-                        phone : $('#inp-phone').val(),
+                        email : email,
+                        phone : phone.substring(1,20),
                         "consent-id" : urlParams.get('consent-id'),
                         scope : urlParams.get('scope'),
                         tpp: urlParams.get('tpp'),
@@ -917,18 +925,15 @@
                         callback(result);
                     })
                     .fail(function (err) {
+                        var ajaxErr = err.responseJSON;
 
-                        switch(err.status) {
-                            case 401:
-                                // code block
-                                console.log('Unauthenticated - Redirect')
-                                break;
-                            default:
-                                if(err.responseJSON!==undefined){ var error_type = err.responseJSON.error; } else { var error_type = ''; }
-                                var ajaxErr = { status: "error", type: error_type };
+                        var result = ajaxErr;
+                        result.status_code = err.status;
+                        result.error = ajaxErr;
 
-                                callback(ajaxErr);
-                        }
+
+                        callback(result);
+
 
                     });
             },
@@ -947,7 +952,8 @@
 
             handle_response: function(data){
 
-                if(data['lanistar error']!==undefined){
+
+                if(data.status_code!==200){
 
                     $('.p-home').hide();
                     $('.p-sorry').show();
@@ -955,17 +961,24 @@
 
                 } else {
 
-                    if (data.status === 'error') {
+                    if(data.message==='sent by email'){
 
+                        $('.methodOfComms').text('Email Sent');
+                        $('.methodOfCommsInfo').text('You will recieve an email shortly with a link to begin your consent journey.');
                         $('.p-home').hide();
-                        $('.p-sorry').show();
-                        $('.p-thankyou').hide();
+                        $('.p-sorry').hide();
+                        $('.p-thankyou').show();
                     } else {
+                        $('.methodOfComms').text('SMS Sent');
+                        $('.methodOfCommsInfo').text('You will recieve an SMS shortly with a link to begin your consent journey.');
                         $('.p-home').hide();
                         $('.p-sorry').hide();
                         $('.p-thankyou').show();
                     }
+
+
                 }
+
 
 
             }
