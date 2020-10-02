@@ -335,7 +335,7 @@ var apps = {
 
         };
 
-        tell_ajax_handler.caller(apps.createApplicationResponseHandler, ajaxCallData);
+        tell_ajax_handler.caller(apps.updateApplicationResponseHandler, ajaxCallData);
 
 
 
@@ -449,6 +449,27 @@ var apps = {
         $('.unclicked_form_button').prop('disabled', false);
 
 
+
+    },
+
+    updateApplicationResponseHandler: function (data) {
+
+        console.log(data.status);
+
+        if (data.status === 'error') {
+            apps.updateAlertManager('show', false);
+        } else {
+            apps.updateAlertManager('show', true);
+
+            setTimeout(function () {
+                apps.redirect("/applications");
+            }, 2000);
+
+        }
+
+
+        $('.unclicked_form_button').removeClass('saving');
+        $('.unclicked_form_button').prop('disabled', false);
 
     },
 
