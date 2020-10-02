@@ -20,7 +20,10 @@ var tell_ajax_handler = {
                 switch(err.status) {
                     case 401:
                         // code block
-                        console.log('Unauthenticated - Redirect')
+                        if(err.responseJSON!==undefined){ var error_type = err.responseJSON.error; } else { var error_type = ''; }
+                        var ajaxErr = { status: "error", type: error_type };
+                        console.log('Unauthenticated - Redirect');
+                        callback(ajaxErr);
                         break;
                     default:
                         if(err.responseJSON!==undefined){ var error_type = err.responseJSON.error; } else { var error_type = ''; }
