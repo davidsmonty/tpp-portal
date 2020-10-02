@@ -417,15 +417,20 @@ if(file!==undefined) {
     },
     updateUserResponseHandler: function(profile_data){
 
-        profile.updateAlertManager('show', true);
+        if(profile_data.status!=='error') {
+            profile.updateAlertManager('show', true);
 
-        console.log(profile_data)
+            console.log(profile_data)
 
-        profile.populateUserProfile(profile_data);
+            profile.populateUserProfile(profile_data);
 
-        $('.unclicked_form_button').removeClass('saving');
-        $('.unclicked_form_button').prop('disabled', false);
-
+            $('.unclicked_form_button').removeClass('saving');
+            $('.unclicked_form_button').prop('disabled', false);
+        } else {
+            profile.updateAlertManager('show', false);
+            $('.unclicked_form_button').removeClass('saving');
+            $('.unclicked_form_button').prop('disabled', false);
+        }
 
 
     },
