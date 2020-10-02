@@ -678,6 +678,40 @@
             }
         }
 
+        .submit-email-retry{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            color: #FFFFFF;
+            border-radius: 13px;
+            /* border-top-left-radius: 0; */
+            /* border-bottom-left-radius: 0; */
+            border: none;
+            padding: 27px 0 24px;
+            top: -10px;
+            margin-top: 27px;
+            background-image: -moz-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+            background-image: -webkit-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+            background-image: -ms-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+        }
+        @media screen and (min-width: 320px) and (max-width: 504px) and (orientation: portrait) {
+            .submit-email-retry{
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                color: #FFFFFF;
+                border-radius: 13px;
+                height: 50px;
+                border: none;
+                padding: 12px 0 12px;
+                top: -10px;
+                margin-top: 27px;
+                background-image: -moz-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+                background-image: -webkit-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+                background-image: -ms-linear-gradient(120deg, #237d8e 0%, #4bcee6 100%);
+            }
+        }
+
         .row {
 
             min-width: 55%;
@@ -796,20 +830,20 @@
                                     <div>
                                         <div class="form-line part-1">
                                             <label for="inp-email">Email</label>
-                                            <input type="email" id="inp-email" name="inp-email" class="form-control"
+                                            <input type="email" id="inp-email-retry" name="inp-email-retry" class="form-control"
                                                    placeholder="example@example.com">
 
-                                            <div class="ntf-error error-email" style="display: none;"></div>
+
                                         </div>
                                         <p class="" style="padding-top: 15px; color: #727272; text-align: center;">------ or ------</p>
                                         <div class="form-line part-1">
                                             <label for="inp-phone" class="secondlabel">Mobile Number</label>
-                                            <input type="number" id="inp-phone" name="inp-phone" class="form-control"
+                                            <input type="number" id="inp-phone-retry" name="inp-phone-retry" class="form-control"
                                                    placeholder="+44 123 123 123">
 
-                                            <div class="ntf-error error-email" style="display: none;"></div>
+
                                         </div>
-                                        <button id="btn-p-1" class="btn btn-submit submit-email"><span
+                                        <button id="btn-p-1" class="btn btn-submit submit-email-retry"><span
                                                 class="text">Begin</span>&nbsp;&nbsp;&nbsp;<i class="far fa-play-circle"></i>
                                         </button>
                                     </div>
@@ -849,7 +883,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/js/utils.js" integrity="sha256-Dgk4ywhuqU0wvPuVIPRY9AtcRW0G7YaGT/MCLDAVDNE=" crossorigin="anonymous"></script>
 <script>
 
+    /* FOR DEV ONLY */
+    var _config = {};
 
+        _config.base_api_path = 'https://system.tell.money/dev/';
+        _config.subdomain = 'lanistardev';
 
     var consent_initialise = {
             initiate: function(){
@@ -878,6 +916,27 @@
                     }
 
                 });
+
+                $(document).on("click", ".submit-email-retry", function (event) {
+
+                    // validate form
+                    var phone = $('#inp-phone-retry').val();
+                    if(phone.substring(0,1)=='0'){ phone = "+44"+phone.substring(1,20); }
+                    if(phone.substring(0,1)=='4'){ phone = "+"+phone; }
+                    $('#inp-phone-retry').val(phone);
+                    var v_email = consent_initialise.checkEmail($('#inp-email-retry').val());
+                    var v_phone = consent_initialise.checkMobile(phone);
+
+
+                    if(v_email===false && v_phone === false){
+                        $('.error-message').show();
+                    } else
+                    {
+                        $('.error-message').hide();
+                        consent_initialise.prepare_call($('#inp-email-retry').val(),phone);
+                    }
+
+                });
             },
             prepare_call: function(email,phone){
 
@@ -895,6 +954,8 @@
                         app: urlParams.get('app')
                 }
                 };
+
+                console.log(params);
 
                 var url = _config.base_api_path+'auth/initiate';
 
