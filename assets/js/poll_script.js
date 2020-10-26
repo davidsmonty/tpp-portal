@@ -1,26 +1,36 @@
 var test_result = 0;
-var time_out_seconds = 100000;
+var time_out_seconds = 360;
 var interval_seconds = 2;
 
 var poll_handler = {
 
     initialise: function () {
 
+        loadGraphics();
+
         var urlParams = new URLSearchParams(location.search);
-        var consentid = urlParams.get('consent-id');
+        var consent = urlParams.get('consent-id');
+        var id = urlParams.get('id');
+        var loc = atob(id);
 
-        var to = time_out_seconds * 1000;
-        var itv = interval_seconds * 1000;
+        window.location.replace(loc);
+        setTimeout(function () {
 
-        poll_handler.poll({}, to, itv, consentid).then(function () {
+            jQuery("#QR2").qrcode({
+                render: "table",
+                width: 128,
+                height: 128,
+                text: loc
+            });
 
-            console.log('Polling Complete')
-            // Polling done, now do something else!
-        }).catch(function () {
-            // Polling timed out, handle the error!
-            console.log('Polling Error')
-        });
+            var to = time_out_seconds * 1000;
+            var itv = interval_seconds * 1000;
 
+            poll_handler.poll({}, to, itv, consent).then(function () {
+            }).catch(function () {
+                // Polling timed out, handle the error!                
+            });
+        }, 500);
 
     },
 
@@ -41,7 +51,6 @@ var poll_handler = {
                     switch (result.responseJSON.action) {
 
                         case 'fail':
-                            console.log('fail')
                             $("#pre_consent").hide();
                             $("#consent_fail").show();
                             break;
@@ -49,7 +58,6 @@ var poll_handler = {
                         case 'qr':
                             $("#pre_consent").show();
                             if (Number(new Date()) < endTime) {
-                                console.log('polling pre qr')
                                 setTimeout(checkCondition, interval, resolve, reject);
                             }
                             break;
@@ -58,39 +66,23 @@ var poll_handler = {
                             $("#pre_consent").hide();
                             $("#consent_wait").show();
                             if (Number(new Date()) < endTime) {
-                                console.log('polling post qr')
                                 setTimeout(checkCondition, interval, resolve, reject);
                             } else {
-                                alert()
-                                //console.log('timeout - redirecting to TPP')
                                 window.location.replace(result.responseJSON.redirect_url);
-                                alert('timeout - redirecting to TPP')
                             }
                             break;
 
                         case 'redirect':
-                            console.log('redirecting to TPP')
                             window.location.replace(result.responseJSON.redirect_url);
-                            //alert('redirecting to TPP')
                             break;
 
                     }
-
-                // all out error
-                /*default:
-                    var err = 'Unrecognised outcome - Reject';
-                    console.log(err)
-                    $("#pre_consent").hide();
-                    $("#consent_fail").show();
-                */
             }
-
         };
 
         return new Promise(checkCondition);
     },
     poll_conditional: function (consentid) {
-
         var rsp = $.ajax({
             type: "GET",
             url: _config.base_api_path + "poll/" + consentid,
@@ -98,13 +90,14 @@ var poll_handler = {
             headers: {
                 "Content-Type": "application/json"
             }
-        }).done(function (result) {
+        }).done(function (result) {    
             return result;
         });
-        console.log(JSON.stringify(rsp))
         return rsp;
 
     },
+
+
 }
 
 poll_handler.initialise();

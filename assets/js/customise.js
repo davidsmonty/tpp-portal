@@ -11,7 +11,9 @@ var icon2 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone.pn
 var icon3 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad.png";
 var icon4 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-iphone-retina.png";
 var icon5 = "/assets/aspsp-assets/" + _config.subdomain + "/touch-icon-ipad-retina.png";
+
 function loadGraphics(){
+    console.log(1)
     document.getElementById("logo-dark").src = logodark;
     document.getElementById("logo-light").src = logolight;
     document.getElementById("icon0").src = icon0;
@@ -20,9 +22,12 @@ function loadGraphics(){
     document.getElementById("icon3").src = icon3;
     document.getElementById("icon4").src = icon4;
     document.getElementById("icon5").src = icon5;
+    console.log(2)
 }
 window.onload = function(){
+    console.log('333')
     loadGraphics();
+    console.log('456')
 };
 
 // customise pisp
